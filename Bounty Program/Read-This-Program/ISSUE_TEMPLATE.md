@@ -31,4 +31,4 @@ Example :
  - `zkBNB-Go-SDK` - Bounty Program:  https://github.com/bnb-chain/zkbnb-go-sdk
 
 ### Payment Agreement
-- link [http]
+- link [http](https://github.com/DylanCkawalec/cv/blob/master/Bounty%20Program/Read-This-Program/payment_agreement.md)
