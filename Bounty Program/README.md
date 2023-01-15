@@ -1,5 +1,7 @@
 ###### tags: `BNB`, `Bounty_Program`
-![](https://hackmd.io/_uploads/ByATdxWii.png)
+
+![](https://hackmd.io/_uploads/rJcyX-bsj.png)
+
 
 # Issues are Bounties 
 At BNB, our motto is 'Build and Build.' We firmly believe in the power of active development and growth to drive progress forward. That's why we're giving developers the opportunity to commit to their own issues raised on our Github repository - to foster a community of builders and creators who can push the BNB ecosystem forward together.
