@@ -1,4 +1,4 @@
-## zk BNB Challenge's 
+# zk BNB Challenge's 
 - [zkBNB](https://github.com/bnb-chain/zkbnb)
 - [zkBNB API Reference Guide](https://test.zkbnbchain.org/docs/api/reference)
 
