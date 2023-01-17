@@ -1,5 +1,4 @@
 
-- [resources]()
 
 
 | Challenge name | Objective | Challenge |  Problem  |
