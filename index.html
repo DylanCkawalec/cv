@@ -21,34 +21,74 @@
     </header>
 
     <section>
-      <h2>Professional Summary</h2>
+      <h2>&#x1F464; Professional Summary</h2>
       <p>
         Accomplished Principal Software Engineer and CTO with a proven track record of delivering innovative blockchain solutions. Extensive experience in blockchain protocols, Rust programming, and solutions architecture. Skilled in developing smart contracts, zero-knowledge proof protocols, and decentralized applications. Passionate about fostering developer communities and driving technology initiatives in startups.
       </p>
     </section>
 
     <section>
-      <h2>Technical Skills</h2>
-      <ul class="skills-list">
-        <li class="skill-item">Rust</li>
-        <li class="skill-item">Blockchain: Ethereum, Binance Labs, Harmony, Findora, Polkadot, Aleo, Osmosis</li>
-        <li class="skill-item">Programming: Solidity, JavaScript, Python, C++</li>
-        <li class="skill-item">Cryptography: Trusted Execution Environments, Zero-Knowledge Proofs, Decentralized Relayers</li>
-        <li class="skill-item">Web: Tailwind CSS, Cargo Yul, Cargo Tauri Desktop</li>
-        <li class="skill-item">Databases: MongoDB, PostgreSQL</li>
-        <li class="skill-item">DevRel: System Architecture, Technical Market Campaigns, Speaker, Networking</li>
-        <li class="skill-item">Tools: Git, GitHub, Lucid Charts, AI</li>
-      </ul>
+      <h2>&#x2699; Technical Skills</h2>
+      <div class="skills-container">
+        <div class="skills-column">
+          <div class="skill-item">
+            <div class="skill-name">Rust</div>
+            <div class="skill-bar" data-experience="5">
+              <div class="skill-level"></div>
+              <div class="skill-years">5 years</div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">Solidity</div>
+            <div class="skill-bar" data-experience="3">
+              <div class="skill-level"></div>
+              <div class="skill-years">4 years</div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">JavaScript</div>
+            <div class="skill-bar" data-experience="1">
+              <div class="skill-level"></div>
+              <div class="skill-years">2 year</div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">Python</div>
+            <div class="skill-bar" data-experience="1">
+              <div class="skill-level"></div>
+              <div class="skill-years">4 year</div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">C++</div>
+            <div class="skill-bar" data-experience="1">
+              <div class="skill-level"></div>
+              <div class="skill-years">2 year</div>
+            </div>
+          </div>
+        </div>
+        <div class="skills-column">
+          <ul class="skills-list">
+            <li>Blockchain: Ethereum, Binance Labs, Harmony, Findora, Polkadot, Aleo, Osmosis</li>
+            <li>Cryptography: Trusted Execution Environments, Zero-Knowledge Proofs, Decentralized Relayers</li>
+            <li>Web: Tailwind CSS, Cargo Yul, Cargo Tauri Desktop</li>
+            <li>Databases: MongoDB, PostgreSQL</li>
+            <li>DevRel: System Architecture, Technical Market Campaigns, Speaker, Networking</li>
+            <li>Tools: Git, GitHub, Lucid Charts, AI</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section>
-      <h2>Notable Rust Projects</h2>
+      <h2>&#x1F4BB; Notable Projects</h2>
       <div class="experience-item">
-        <h3>Invo (v3.3.6)</h3>
+        <h3>Invo SDK - Rocky Road API (v3.3.6)</h3>
         <p>
-          Developed a program to register games and players, and decrypt them by determining their key pairs on-chain and in a database. Utilized advanced encryption techniques like AEAD, AES, and RSA, along with key management using BIP39 and HKDF. Built a robust backend using Actix Web and integrated with various Rust libraries for efficient data processing and storage.
+            Developed an architecture that allows games and their players to use a decentralized exchange within the game. This enables interoperability of game tokens across different games. I employed advanced encryption techniques such as AEAD, AES, and RSA, and managed keys using BIP39 and HKDF. The robust backend was built using Actix Web and integrated with various Rust libraries. For instance, Redis was used for efficient data processing and storage, facilitating communication between games and our Invo parachain using Substrate's subxt library.
         </p>
       </div>
+    
 
       <div class="experience-item">
         <h3>B3zrk (v0.4.0)</h3>
@@ -77,10 +117,17 @@
           Built a secure and user-friendly wallet interface using Rust, incorporating advanced cryptographic techniques like HMAC, HKDF, and elliptic curve cryptography. Implemented support for BIP39 mnemonic phrases and utilized the Tiny-Keccak library for efficient hash calculations. Integrated with the Substrate blockchain framework using the sp-core library, enabling seamless interaction with blockchain networks.
         </p>
       </div>
+
+      <div class="experience-item">
+        <h3>AIMBC Trustless Bridge Protocol</h3>
+        <p>
+            Developed the AIMBC trustless bridge protocol using Solidity. This protocol allows secure and efficient token swaps across different EVM (Ethereum Virtual Machine) blockchains. I used the Aleo blockchain to generate zero-knowledge proofs, which verify transactions and ensure trustless execution of Atomic Swaps that function similarly to a bridging protocol. The design was inspired by the HTLC (Hashed TimeLock Contract) protocol. I integrated this with the Ethereum and Binance Smart Chain using the Rust ethers-rs library, which enables seamless interoperability and liquidity provision.
+        </p>
+      </div>
     </section>
 
     <section>
-      <h2>Professional Experience</h2>
+      <h2>&#x1F4BC; Professional Experience</h2>
       <div class="experience-item">
         <h3>Invo Technologies Inc. | Chief Technology Officer</h3>
         <p>May 2023 - Present</p>
@@ -125,7 +172,7 @@
     </section>
 
     <section>
-      <h2>Education</h2>
+      <h2>&#x1F393; Education</h2>
       <div class="education-item">
         <p>Bachelor of Science in Computer Science</p>
         <p>Western Governors University, Utah (WGU)</p>
@@ -133,7 +180,7 @@
     </section>
 
     <section>
-      <h2>Awards and Achievements</h2>
+      <h2>&#x1F3C6; Awards and Achievements</h2>
       <ul>
         <li>Winner, Hacker Deathmatch AOS Arweave Hackathon 2024 at ETHDenver (Solo) - <a href="https://x.com/aoTheComputer/status/1764094933428732127" target="_blank">Details</a></li>
         <li>Winner, Aleo Best Tech Award 2023 -- <a href="https://github.com/Invo-Technologies/poems" target="_blank">'POEMS protocol'</a></li>
@@ -144,7 +191,7 @@
     </section>
 
     <section>
-      <h2>Community Involvement</h2>
+      <h2>&#x1F465; Community Involvement</h2>
       <ul>
         <li>Founder, Bridge Builders DAO - Fostering developer relations and organizing local hackathons in South San Francisco</li>
         <li>Seasonal Programming Instructor, Delaware STEAM Academy - Teaching Python and C++ to international students</li>
@@ -154,7 +201,7 @@
 
 
 <section>
-  <h2>Publications and Presentations</h2>
+  <h2>&#x1F3A4; Publications and Presentations</h2>
   <ul>
     <li>
               <li>
@@ -185,5 +232,20 @@
       <p>References available upon request</p>
     </footer>
   </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const skillBars = document.querySelectorAll(".skill-bar");
+  const maxYears = 5; // Set the maximum years of experience
+
+  skillBars.forEach((skillBar) => {
+    const experience = skillBar.getAttribute("data-experience");
+    const skillLevel = skillBar.querySelector(".skill-level");
+    const barWidth = (experience / maxYears) * 100;
+    skillLevel.style.width = `${barWidth}%`;
+  });
+});
+  </script>
+
 </body>
 </html>
