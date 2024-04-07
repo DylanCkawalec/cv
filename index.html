@@ -11,19 +11,18 @@
 <body>
   <div class="container">
     <header>
-      <h1>Dylan Kawalec</h1>
-      <p>Principal Software Engineer & Blockchain Specialist</p>
+      <h1>Dylan Christopher Kawalec</h1>
+      <p>Blockchain Solutions Architect & Principal Software Engineer</p>
       <div>
         <a href="mailto:dylankawalec@gmail.com">dylankawalec@gmail.com</a> |
         <a href="https://www.linkedin.com/in/dylankawalec/" target="_blank">LinkedIn</a> |
         <a href="https://github.com/DylanCkawalec" target="_blank">GitHub</a>
       </div>
     </header>
-
     <section>
       <h2>&#x1F464; Professional Summary</h2>
       <p>
-        Accomplished Principal Software Engineer and CTO with a proven track record of delivering innovative blockchain solutions. Extensive experience in blockchain protocols, Rust programming, and solutions architecture. Skilled in developing smart contracts, zero-knowledge proof protocols, and decentralized applications. Passionate about fostering developer communities and driving technology initiatives in startups.
+        Accomplished Blockchain Solutions Architect and Principal Software Engineer with a proven track record of delivering cutting-edge blockchain solutions. Extensive expertise in blockchain protocol development, cryptography, and Rust programming. Skilled in architecting and implementing smart contracts, zero-knowledge proof protocols, and decentralized applications. Passionate about driving innovation in the blockchain space and fostering developer communities. Experienced in leading technology initiatives and managing high-performance teams in fast-paced startup environments.
       </p>
     </section>
 
@@ -40,30 +39,30 @@
           </div>
           <div class="skill-item">
             <div class="skill-name">Solidity</div>
-            <div class="skill-bar" data-experience="3">
+            <div class="skill-bar" data-experience="4">
               <div class="skill-level"></div>
               <div class="skill-years">4 years</div>
             </div>
           </div>
           <div class="skill-item">
             <div class="skill-name">JavaScript</div>
-            <div class="skill-bar" data-experience="1">
+            <div class="skill-bar" data-experience="2">
               <div class="skill-level"></div>
-              <div class="skill-years">2 year</div>
+              <div class="skill-years">2 years</div>
             </div>
           </div>
           <div class="skill-item">
             <div class="skill-name">Python</div>
-            <div class="skill-bar" data-experience="1">
+            <div class="skill-bar" data-experience="4">
               <div class="skill-level"></div>
-              <div class="skill-years">4 year</div>
+              <div class="skill-years">4 years</div>
             </div>
           </div>
           <div class="skill-item">
             <div class="skill-name">C++</div>
-            <div class="skill-bar" data-experience="1">
+            <div class="skill-bar" data-experience="2">
               <div class="skill-level"></div>
-              <div class="skill-years">2 year</div>
+              <div class="skill-years">2 years</div>
             </div>
           </div>
         </div>
@@ -235,16 +234,17 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-  const skillBars = document.querySelectorAll(".skill-bar");
-  const maxYears = 5; // Set the maximum years of experience
-
-  skillBars.forEach((skillBar) => {
-    const experience = skillBar.getAttribute("data-experience");
-    const skillLevel = skillBar.querySelector(".skill-level");
-    const barWidth = (experience / maxYears) * 100;
-    skillLevel.style.width = `${barWidth}%`;
-  });
+      const skillBars = document.querySelectorAll(".skill-bar");
+      const maxYears = 5; // Set the maximum years of experience
+  
+      skillBars.forEach((skillBar) => {
+  const experience = skillBar.getAttribute("data-experience");
+  const skillLevel = skillBar.querySelector(".skill-level");
+  const barWidth = (experience / maxYears) * 100;
+  console.log(`Experience: ${experience}, Bar Width: ${barWidth}%`);
+  skillLevel.style.width = `${barWidth}%`;
 });
+    });
   </script>
 
 </body>
