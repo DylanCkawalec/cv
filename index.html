@@ -6,177 +6,322 @@
   <title>Dylan Kawalec - Resume</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
   <style>
-   body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #0d1117;
-  color: #c9d1d9;
-  line-height: 1.6;
-  font-size: 16px;
-}
-
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
-  background-color: #161b22;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-}
-
-h1, h2, h3 {
-  color: #58a6ff;
-  margin-bottom: 1rem;
-}
-
-h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-}
-
-h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid #58a6ff;
-  display: flex;
-  align-items: center;
-}
-
-h2 i {
-  margin-right: 0.5rem;
-  color: #79c0ff;
-}
-
-h3 {
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-
-p {
-  margin-bottom: 1.5rem;
-  font-size: 1.1rem;
-}
-
-a {
-  color: #79c0ff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #a5d6ff;
-  text-decoration: underline;
-}
-
-ul {
-  margin-bottom: 1.5rem;
-  list-style-type: disc;
-  padding-left: 2rem;
-}
-
-li {
-  margin-bottom: 0.5rem;
-}
-
-section {
-  margin-bottom: 3rem;
-}
-
-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-header p {
-  font-size: 1.25rem;
-  color: #8b949e;
-}
-
-.skills-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem;
-}
-
-.skills-column {
-  flex: 1;
-}
-
-.skill-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.skill-name {
-  width: 120px;
-  font-weight: 500;
-}
-
-.skill-bar {
-  position: relative;
-  width: 100%;
-  height: 10px;
-  background-color: #30363d;
-  border-radius: 5px;
-  margin-top: 5px;
-}
-
-.skill-level {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background-color: #58a6ff;
-  border-radius: 5px;
-  transition: width 1s ease;
-  width: 0;
-}
-
-.skill-years {
-  position: absolute;
-  top: -20px;
-  right: 0;
-  font-size: 12px;
-  color: #c9d1d9;
-}
-
-
-
-.education-item {
-  margin-bottom: 1rem;
-}
-
-.education-item p {
-  margin-bottom: 0.25rem;
-}
-
-footer {
-  text-align: center;
-  margin-top: 2rem;
-  color: #8b949e;
-}
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #0d1117;
+      color: #c9d1d9;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: #161b22;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+    }
+    
+    h1, h2, h3 {
+      color: #58a6ff;
+      margin-bottom: 1rem;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    
+    h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #58a6ff;
+      display: flex;
+      align-items: center;
+    }
+    
+    h2 i {
+      margin-right: 0.5rem;
+      color: #79c0ff;
+    }
+    
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+    
+    p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+    
+    a {
+      color: #79c0ff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    a:hover {
+      color: #a5d6ff;
+      text-decoration: underline;
+    }
+    
+    ul {
+      margin-bottom: 1.5rem;
+      list-style-type: disc;
+      padding-left: 2rem;
+    }
+    
+    li {
+      margin-bottom: 0.5rem;
+    }
+    
+    section {
+      margin-bottom: 3rem;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    header p {
+      font-size: 1.25rem;
+      color: #8b949e;
+    }
+    
+    .skills-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    
+    .skills-column {
+      flex: 1;
+    }
+    
+    .skill-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    
+    .skill-name {
+      width: 120px;
+      font-weight: 500;
+    }
+    
+    .skill-bar {
+      position: relative;
+      width: 100%;
+      height: 10px;
+      background-color: #30363d;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+    
+    .skill-level {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background-color: #58a6ff;
+      border-radius: 5px;
+      transition: width 1s ease;
+      width: 0;
+    }
+    
+    .skill-years {
+      position: absolute;
+      top: -20px;
+      right: 0;
+      font-size: 12px;
+      color: #c9d1d9;
+    }
+    
+    .education-item {
+      margin-bottom: 1rem;
+    }
+    
+    .education-item p {
+      margin-bottom: 0.25rem;
+    }
+    
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      color: #8b949e;
+    }
+    
+    @media (max-width: 640px) {
+      .skills-container {
+        flex-direction: column;
+      }
+      
+      .container {
+        padding: 1rem;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
+    <!-- Header -->
     <header>
       <h1>Dylan Christopher Kawalec</h1>
-      <p>Blockchain Solutions Architect & Principal Software Engineer</p>
+      <p>Blockchain Solutions Architect &amp; Principal Software Engineer</p>
       <div>
         <a href="mailto:dylankawalec@gmail.com">dylankawalec@gmail.com</a> |
         <a href="https://www.linkedin.com/in/dylankawalec/" target="_blank">LinkedIn</a> |
         <a href="https://github.com/DylanCkawalec" target="_blank">GitHub</a>
       </div>
     </header>
+
+    <!-- Professional Summary -->
     <section>
       <h2>&#x1F464; Professional Summary</h2>
       <p>
-        Accomplished Blockchain Solutions Architect and Principal Software Engineer with a proven track record of delivering cutting-edge blockchain solutions. Extensive expertise in blockchain protocol development, cryptography, and Rust programming. Skilled in architecting and implementing smart contracts, zero-knowledge proof protocols, and decentralized applications. Passionate about driving innovation in the blockchain space and fostering developer communities. Experienced in leading technology initiatives and managing high-performance teams in fast-paced startup environments.
+        A seasoned Blockchain Solutions Architect and Principal Software Engineer with deep expertise in blockchain protocol development, cryptography, and diverse programming paradigms. Proven in designing and deploying smart contracts, zero-knowledge proof systems, and decentralized applications, Dylan drives innovation and cultivates high-performance teams in dynamic, startup environments.
       </p>
     </section>
 
+    <!-- Professional Experience -->
+    <section>
+      <h2>&#x1F4BC; Professional Experience</h2>
+      <!-- Most Recent Roles -->
+      <div class="experience-item">
+        <h3>Coin.fi | Co-Founder</h3>
+        <p>February 2025 – Present</p>
+        <ul>
+          <li>Co-founded Coin.fi and led the development of an EVM-compatible Layer 1 blockchain protocol.</li>
+          <li>Enabled robust interoperability with major Cosmos exchanges such as Osmosis, dydx, and Binance.</li>
+        </ul>
+      </div>
+      <div class="experience-item">
+        <h3>GOAT Network / ZKM | Head of Developer Relations</h3>
+        <p>July 2024 – February 2025</p>
+        <ul>
+          <li>Directed developer relations initiatives for BTC Layer 2 and ZKM projects.</li>
+          <li>Organized technical workshops and community events to promote secure, scalable blockchain solutions.</li>
+        </ul>
+      </div>
+      <div class="experience-item">
+        <h3>Osmosis Labs | Head of Research and Development</h3>
+        <p>April 2024 – September 2024</p>
+        <ul>
+          <li>Led cutting-edge research in private account abstraction and decentralized front-end architectures.</li>
+          <li>Delivered technical presentations and contributed significantly to the open-source Defe Library.</li>
+        </ul>
+      </div>
+      <div class="experience-item">
+        <h3>Eni6ma | Head of Research and Development</h3>
+        <p>May 2023 – Present</p>
+        <ul>
+          <li>Spearheaded research to develop a quantum-resistant framework using witness accumulation for homomorphic encryption.</li>
+          <li>Designed a specialized zero-knowledge proof system employing visualizations, holograms, topological field theories, and lattice-based cryptography in Python, C++, and Rust.</li>
+        </ul>
+      </div>
+      <div class="experience-item">
+        <h3>Invo Technologies Inc. | Chief Technology Officer</h3>
+        <p>May 2023 – January 2025</p>
+        <ul>
+          <li>Directed development of a robust, scalable currency exchange system handling high transaction volumes.</li>
+          <li>Engineered a transaction compression algorithm that reduced storage requirements by 60%.</li>
+          <li>Developed a dynamic API for real-time management of rates, fees, and operational restrictions.</li>
+          <li>Implemented a custom Shamir Proof algorithm for secure off-chain transactions with on-chain verification.</li>
+          <li>Established a trustless atomic swap protocol for seamless token exchanges across EVM blockchains.</li>
+        </ul>
+      </div>
+      <div class="experience-item">
+        <h3>BNB Chain Labs | U.S. Technology Evangelist</h3>
+        <p>November 2022 – May 2023</p>
+        <ul>
+          <li>Conducted workshops, authored technical documentation, and provided thought leadership to advance Solidity, Web3, and BNB Blockchain adoption.</li>
+          <li>Mentored developers during zkBNB sessions, fostering secure blockchain application development.</li>
+          <li>Served as judge and panelist at ETHDenver Hackathon, guiding innovative blockchain projects.</li>
+        </ul>
+      </div>
+      <div class="experience-item">
+        <h3>Discreet Labs | Business Development Specialist &amp; DevRel</h3>
+        <p>May 2022 – October 2022</p>
+        <ul>
+          <li>Managed strategic partnerships, competitive analyses, and event coordination to drive business growth.</li>
+          <li>Delivered workshops on zero-knowledge proof cryptography and bridging, while providing expert smart contract testing for the Findora X Smart Chain.</li>
+        </ul>
+      </div>
+      <div class="experience-item">
+        <h3>Harmony | DevRel</h3>
+        <p>June 2021 – May 2022</p>
+        <ul>
+          <li>Conducted live developer workshops with tailored curricula to educate participants on blockchain technologies.</li>
+          <li>Oversaw DAO operations for 'Harmony Developer DAO' and 'Bridge Builders DAO', fostering community collaboration and governance.</li>
+          <li>Facilitated developer-project matchmaking to accelerate ecosystem growth.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Notable Projects -->
+    <section>
+      <h2>&#x1F4BB; Notable Projects</h2>
+      <div class="experience-item">
+        <h3>Rossario Wang Proof</h3>
+        <p>
+          Engineered an innovative cryptographic framework that projects holographic representations across topological fields using lattice structures. This unified algorithm—integrating quantum-resistant cryptography with advanced data transformation techniques—supports secure communications, robust authentication, and protected access for both blockchain and governmental applications.
+        </p>
+      </div>
+      <div class="experience-item">
+        <h3>Defe Library</h3>
+        <p>
+          Developed a comprehensive suite of Rust-based tools—including specialized TEE server applications, Confidential Certbot integrations, and Fortanix-powered programs—to decentralize domain ownership via a blockchain registry on platforms such as Optimism, Osmosis, and Ethereum Layer 1.
+        </p>
+      </div>
+      <div class="experience-item">
+        <h3>Invo SDK – Rocky Road API (v3.3.6)</h3>
+        <p>
+          Architected a decentralized exchange system for in-game tokens, integrating advanced encryption (AEAD, AES, RSA) with key management via BIP39 and HKDF. The backend, built on Actix Web and Rust libraries, utilizes Redis for efficient processing and communicates seamlessly with the Invo parachain through Substrate's subxt library.
+        </p>
+      </div>
+      <div class="experience-item">
+        <h3>B3zrk (v0.4.0)</h3>
+        <p>
+          Engineered an off-chain cryptocurrency exchange in Rust using the Blake3 hashing algorithm for enhanced security. Pioneered the POEMS protocol—a zero-knowledge Trusted Execution Environment for signature verification—and executed verifiable on-chain transactions via Aleo's advanced cryptographic frameworks.
+        </p>
+      </div>
+      <div class="experience-item">
+        <h3>Invo AI (v0.2.0)</h3>
+        <p>
+          Developed a blockchain relayer in Rust that functions as an AI data analyst for the Invo blockchain. Built with the Actix Web framework, the solution integrates external AI APIs through Reqwest and employs Serde for efficient serialization, ensuring smooth inter-component communication.
+        </p>
+      </div>
+      <div class="experience-item">
+        <h3>POEMS Protocol</h3>
+        <p>
+          Conceived and implemented the POEMS protocol—a zero-knowledge Trusted Execution Environment for secure function signature verification. Recognized with a $50,000 grant from the Aleo Foundation, this innovation enables off-chain decentralized exchange transactions to be verifiably executed on-chain.
+        </p>
+      </div>
+      <div class="experience-item">
+        <h3>Invo Wallet Interface (v0.1.0)</h3>
+        <p>
+          Created a secure and intuitive wallet interface using Rust, integrating advanced cryptographic techniques such as HMAC, HKDF, and elliptic curve cryptography. With support for BIP39 mnemonic phrases and efficient hashing via the Tiny-Keccak library, the solution interfaces seamlessly with the Substrate blockchain using the sp-core library.
+        </p>
+      </div>
+      <div class="experience-item">
+        <h3>AIMBC Trustless Bridge Protocol</h3>
+        <p>
+          Developed a Solidity-based trustless bridge protocol enabling secure token swaps across multiple EVM blockchains. Leveraging the Aleo blockchain for zero-knowledge proofs, the protocol ensures verifiable atomic swaps and seamless interoperability between Ethereum and Binance Smart Chain via the Rust ethers-rs library.
+        </p>
+      </div>
+    </section>
+
+    <!-- Technical Skills -->
     <section>
       <h2>&#x2699; Technical Skills</h2>
       <div class="skills-container">
@@ -219,164 +364,110 @@ footer {
         </div>
         <div class="skills-column">
           <ul class="skills-list">
-            <li>Blockchain: Ethereum, Binance Labs, Harmony, Findora, Polkadot, Aleo, Osmosis</li>
-            <li>Cryptography: Trusted Execution Environments, Zero-Knowledge Proofs, Decentralized Relayers</li>
-            <li>Web: Tailwind CSS, Cargo Yul, Cargo Tauri Desktop</li>
-            <li>Databases: MongoDB, PostgreSQL</li>
-            <li>DevRel: System Architecture, Technical Market Campaigns, Speaker, Networking</li>
-            <li>Tools: Git, GitHub, Lucid Charts, AI</li>
+            <li>Blockchains: Ethereum Foundation, Binance (BNB Chain Labs), Harmony Foundation (ZK University), Discreet Labs (Findora Project), Parity Technologies (Substrate/Polkadot), Aleo (Provable Co.), Osmosis Labs (Cosmos)</li>
+            <li>Cryptography: Trusted Execution Environments, Zero-Knowledge Proofs, Decentralized Relayers, Lattice-based Cryptography, Quantum-Resistant Cryptography</li>
+            <li>Web: JavaScript, TypeScript, RemixJS, NextJS, Tailwind CSS, CSS, HTML, React</li>
+            <li>Databases: PostgreSQL, Supabase, Redis</li>
+            <li>DevRel: Software System Architecture, Technical Marketing Campaigns, Public Speaking, Business Development, Strategic Partnerships, Technical Documentation</li>
+            <li>Tools: Git, GitHub (CoPilot), Lucid Charts, AI (Claude, OpenAI, Grok), Overleaf</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section>
-      <h2>&#x1F4BB; Notable Projects</h2>
-      <div class="experience-item">
-        <h3>Invo SDK - Rocky Road API (v3.3.6)</h3>
-        <p>
-            Developed an architecture that allows games and their players to use a decentralized exchange within the game. This enables interoperability of game tokens across different games. I employed advanced encryption techniques such as AEAD, AES, and RSA, and managed keys using BIP39 and HKDF. The robust backend was built using Actix Web and integrated with various Rust libraries. For instance, Redis was used for efficient data processing and storage, facilitating communication between games and our Invo parachain using Substrate's subxt library.
-        </p>
-      </div>
-    
-
-      <div class="experience-item">
-        <h3>B3zrk (v0.4.0)</h3>
-        <p>
-          Created an off-chain cryptocurrency exchange system using Rust, leveraging the Blake3 hashing algorithm for efficient and secure data processing. Invented and utilized the POEMS protocol as a zero-knowledge Trusted Execution Environment to verify function signatures securely and correctly. Computed off-chain decentralized exchange transactions as verifiable on-chain exchange executions by leveraging Aleo to produce ZKPs with Poseidon2, BHP256, SHA3, and Keccak256 signature schemes.
-        </p>
-      </div>
-
-      <div class="experience-item">
-        <h3>Invo AI (v0.2.0)</h3>
-        <p>
-          Developed a blockchain relayer using Rust, designed to act as an AI data analyst for the Invo blockchain. Leveraged the Actix Web framework to build scalable and performant web services. Integrated with external AI APIs using Reqwest for intelligent data processing and analysis. Utilized Serde for efficient data serialization and deserialization, enabling seamless communication between different components of the system.
-        </p>
-      </div>
-
-      <div class="experience-item">
-        <h3>POEMS Protocol</h3>
-        <p>
-          Invented the POEMS protocol, a zero-knowledge Trusted Execution Environment for verifying function signatures securely and correctly. Received a grant of $50,000 from the Aleo Foundation to architect and develop the protocol. Leveraged the protocol to compute off-chain decentralized exchange transactions as verifiable on-chain exchange executions, enhancing privacy and scalability.
-        </p>
-      </div>
-
-      <div class="experience-item">
-        <h3>Invo Wallet Interface (v0.1.0)</h3>
-        <p>
-          Built a secure and user-friendly wallet interface using Rust, incorporating advanced cryptographic techniques like HMAC, HKDF, and elliptic curve cryptography. Implemented support for BIP39 mnemonic phrases and utilized the Tiny-Keccak library for efficient hash calculations. Integrated with the Substrate blockchain framework using the sp-core library, enabling seamless interaction with blockchain networks.
-        </p>
-      </div>
-
-      <div class="experience-item">
-        <h3>AIMBC Trustless Bridge Protocol</h3>
-        <p>
-            Developed the AIMBC trustless bridge protocol using Solidity. This protocol allows secure and efficient token swaps across different EVM (Ethereum Virtual Machine) blockchains. I used the Aleo blockchain to generate zero-knowledge proofs, which verify transactions and ensure trustless execution of Atomic Swaps that function similarly to a bridging protocol. The design was inspired by the HTLC (Hashed TimeLock Contract) protocol. I integrated this with the Ethereum and Binance Smart Chain using the Rust ethers-rs library, which enables seamless interoperability and liquidity provision.
-        </p>
-      </div>
-    </section>
-
-    <section>
-      <h2>&#x1F4BC; Professional Experience</h2>
-      <div class="experience-item">
-        <h3>Invo Technologies Inc. | Chief Technology Officer</h3>
-        <p>May 2023 - Present</p>
-        <ul>
-          <li>Spearheaded the development of the robust and scalable Invo B3ZRK currency exchange system, handling high transaction volumes and serving a large user base</li>
-          <li>Designed an innovative transaction compression proof algorithm, reducing storage requirements by 60% and improving system efficiency</li>
-          <li>Developed a dynamic API for managing rates, fees, and restrictions in financial operations, enabling real-time adjustments and optimizations</li>
-          <li>Engineered a custom Shamir Proof algorithm for secure off-chain transactions with on-chain proof, enhancing privacy and scalability</li>
-          <li>Created a trustless atomic swapping protocol for seamless token swaps across EVM blockchains, facilitating interoperability and liquidity</li>
-        </ul>
-      </div>
-
-      <div class="experience-item">
-        <h3>BNB Chain Labs | Technology Evangelist</h3>
-        <p>Nov 2022 - May 2023</p>
-        <ul>
-          <li>Conducted developer evangelism through workshops, documentation, and thought leadership, promoting the adoption of Solidity, Web3, and BNB-Blockchain technologies</li>
-          <li>Mentored developers during zkBNB workshops and remote technical sessions, empowering them to build secure and scalable blockchain applications</li>
-          <li>Served as a judge, mentor, and panelist at the ETHDenver Hackathon, providing guidance and evaluating innovative blockchain projects</li>
-        </ul>
-      </div>
-
-      <div class="experience-item">
-        <h3>Discreet Labs | Business Development Specialist & DevRel</h3>
-        <p>May 2022 - Oct 2022</p>
-        <ul>
-          <li>Managed strategic partnerships, competitive analysis, and event coordination, driving business growth and market positioning</li>
-          <li>Conducted workshops on Zero-Knowledge Proof cryptography, validation, and bridging, educating developers and fostering community engagement</li>
-          <li>Provided smart contract testing expertise on the Findora X Smart Chain, ensuring the reliability and security of blockchain applications</li>
-        </ul>
-      </div>
-
-      <div class="experience-item">
-        <h3>Harmony | DevRel</h3>
-        <p>Jun 2021 - May 2022</p>
-        <ul>
-          <li>Led live developer workshops based on self-created lesson plans, educating developers on blockchain technologies and best practices</li>
-          <li>Managed DAO operation teams, including 'Harmony Developer DAO' and 'Bridge Builders DAO', fostering community collaboration and governance</li>
-          <li>Assisted in devising developer relation strategies and facilitated developer-project matching, accelerating the growth of the Harmony ecosystem</li>
-        </ul>
-      </div>
-    </section>
-
+    <!-- Education -->
     <section>
       <h2>&#x1F393; Education</h2>
       <div class="education-item">
-        <p>Bachelor of Science in Computer Science</p>
-        <p>Western Governors University, Utah (WGU)</p>
+        <h3>Bachelor of Science in Computer Science</h3>
+        <p>Western Governors University (WGU), Utah | August 2020 - August 2021</p>
+        <ul>
+          <li>Comprehensive curriculum focusing on Python, C++, database management, web development, and IT security</li>
+          <li>Developed proficiency in software project management, object-oriented programming, and blockchain research</li>
+          <li>Successfully balanced full-time employment while completing an accelerated online program</li>
+        </ul>
+      </div>
+      <div class="education-item">
+        <h3>Associate of Arts and Sciences (AAS) in Computer Programming</h3>
+        <p>MiraCosta College | 2019 - 2020</p>
+        <ul>
+          <li>Specialized in web, mobile, and desktop application development using Java, Python, HTML, CSS, and JavaScript</li>
+          <li>Active member of MiraCosta's Computer Science Club and Honors Society</li>
+        </ul>
+      </div>
+      <div class="education-item">
+        <h3>Associate of Arts (AA) in Drama and Theatre Arts</h3>
+        <p>MiraCosta College | 2017 - 2018</p>
+        <ul>
+          <li>Member of the Kennedy Center's Theatre Association</li>
+          <li>SAG-AFTRA eligible film actor, represented by Engage Artists Agency (2015-2018)</li>
+          <li>IMDB accredited actor with professional performance experience</li>
+        </ul>
+      </div>
+      <div class="education-item">
+        <h3>Professional Certifications</h3>
+        <ul>
+          <li><strong>Blockchain Development</strong> | Simplilearn | 2021
+            <ul>
+              <li>Solidity programming, Hyperledger Fabric deployment, blockchain architecture and asset management</li>
+              <li>Smart contract development using Ropsten testnet, Truffle, and Ganache</li>
+            </ul>
+          </li>
+          <li><strong>Computer and Information Sciences</strong> | Simplilearn | 2021
+            <ul>
+              <li>Linux CLI mastery, Ubuntu deployment, and system administration</li>
+            </ul>
+          </li>
+          <li><strong>Cyber/Computer Forensics and Counterterrorism</strong> | Simplilearn | 2021
+            <ul>
+              <li>Risk management, encryption standards, device hardening, and security best practices</li>
+            </ul>
+          </li>
+          <li><strong>GoLang Programming</strong> | Udemy | 2021
+            <ul>
+              <li>Full-stack development using GoLang, JavaScript, JSON, and Bootstrap</li>
+              <li>Advanced concepts in concurrency vs. parallelism and package management</li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </section>
 
+    <!-- Awards and Achievements -->
     <section>
       <h2>&#x1F3C6; Awards and Achievements</h2>
       <ul>
-        <li>Winner, Hacker Deathmatch AOS Arweave Hackathon 2024 at ETHDenver (Solo) - <a href="https://x.com/aoTheComputer/status/1764094933428732127" target="_blank">Details</a></li>
-        <li>Winner, Aleo Best Tech Award 2023 -- <a href="https://github.com/Invo-Technologies/poems" target="_blank">'POEMS protocol'</a></li>
-        <li>Winner, ETHAmsterdam 2022 Hackathon with team <a href="https://ethglobal.com/showcase/degenbox-zh7pp" target="_blank">'DegenBox'</a></li>
+        <li>Winner, Hacker Deathmatch AOS Arweave Hackathon 2024 at ETHDenver (Solo) – <a href="https://x.com/aoTheComputer/status/1764094933428732127" target="_blank">Details</a></li>
+        <li>2nd Place, Vechain Hackathon 2024 – Project "PowerUp" for Easy A</li>
+        <li>Winner, Aleo Best Tech Award 2023 – <a href="https://github.com/Invo-Technologies/poems" target="_blank">'POEMS protocol'</a></li>
+        <li>Winner, ETHAmsterdam 2022 Hackathon with team – <a href="https://ethglobal.com/showcase/degenbox-zh7pp" target="_blank">'DegenBox'</a></li>
         <li>Best Partner Award, Kennedy Center American College Theater Festival (KCACTF), 2018</li>
-        
       </ul>
     </section>
 
+    <!-- Community Involvement -->
     <section>
       <h2>&#x1F465; Community Involvement</h2>
       <ul>
-        <li>Founder, Bridge Builders DAO - Fostering developer relations and organizing local hackathons in South San Francisco</li>
-        <li>Seasonal Programming Instructor, Delaware STEAM Academy - Teaching Python and C++ to international students</li>
-        <li>Volunteer Mentor - Coding bootcamps and hackathons</li>
+        <li>Founder, Bridge Builders DAO – Organizing local hackathons and fostering developer collaboration in South San Francisco.</li>
+        <li>Seasonal Programming Instructor, Delaware STEAM Academy – Teaching Python and C++ to international students.</li>
+        <li>Volunteer Mentor – Supporting coding bootcamps and hackathons to nurture emerging talent.</li>
       </ul>
     </section>
 
-
-<section>
-  <h2>&#x1F3A4; Publications and Presentations</h2>
-  <ul>
-    <li>
-              <li>
-                "Unleashing the Power of Zero-Knowledge Proofs in Blockchain Development" - Speaker at Multiple Blockchain Conferences -- <a href="https://www.youtube.com/watch?v=Fr7L9kOf8v8" target="_blank">View Talk</a>
-              </li>
-              <li>
-                "Building Scalable and Secure Decentralized zkTEE Applications with Rust" - ZKM 'House of ZK' 2024 -- <a href="https://www.zkm.io/events/hacker-house" target="_blank">View Presentation</a>
-              </li>
-              <li>
-                "Aleo Developer Enablement Strategy" - Aleo Foundation, for Alex Pruden and Anthony DePrizio -- <a href="https://github.com/DylanCkawalec/Aleo-Developer-Enablement-Strategy" target="_blank">View Article</a>
-              </li>
-              <li>
-                Interacting with Smart Contracts on BNB Chain | Building with BNB Developers -- <a href="https://www.youtube.com/watch?v=pPrGIlwdPf8" target="_blank">View Video</a>
-              </li>
-              <li>
-                How to bridge to Findora & how to swap on FairySwap -- <a href="https://www.youtube.com/watch?v=nHJ2imc8Fy4" target="_blank">View Tutorial</a>
-              </li>
-              <li>
-                Bread N' Butter Developer podcast -- <a href="https://www.youtube.com/watch?v=eBw1oMK3M6c" target="_blank">Listen Podcast</a>
-              </li>
-              <li>
-                Invo Technologies Inc. Demonstration -- <a href="https://medium.com/cryptocurrency-scripts/churn-monetization-is-the-future-of-gamefi-2fac57ff0489" target="_blank">View Demo</a>
-              </li>
-            </ul>
-          </section>
+    <!-- Publications and Presentations -->
+    <section>
+      <h2>&#x1F3A4; Publications and Presentations</h2>
+      <ul>
+        <li>"Unleashing the Power of Zero-Knowledge Proofs in Blockchain Development" – Delivered as a speaker at multiple blockchain conferences. <a href="https://www.youtube.com/watch?v=Fr7L9kOf8v8" target="_blank">View Talk</a></li>
+        <li>"Building Scalable and Secure Decentralized zkTEE Applications with Rust" – Presented at ZKM 'House of ZK' 2024. <a href="https://www.zkm.io/events/hacker-house" target="_blank">View Presentation</a></li>
+        <li>"Aleo Developer Enablement Strategy" – Presented for the Aleo Foundation (with Alex Pruden and Anthony DePrizio). <a href="https://github.com/DylanCkawalec/Aleo-Developer-Enablement-Strategy" target="_blank">View Article</a></li>
+        <li>"Interacting with Smart Contracts on BNB Chain" – A session on building with BNB Developers. <a href="https://www.youtube.com/watch?v=pPrGIlwdPf8" target="_blank">View Video</a></li>
+        <li>"How to Bridge to Findora &amp; Swap on FairySwap" – A comprehensive tutorial. <a href="https://www.youtube.com/watch?v=nHJ2imc8Fy4" target="_blank">View Tutorial</a></li>
+        <li>"Bread N' Butter Developer Podcast" – Guest appearance discussing developer strategies. <a href="https://www.youtube.com/watch?v=eBw1oMK3M6c" target="_blank">Listen Podcast</a></li>
+        <li>"Invo Technologies Inc. Demonstration" – Showcasing innovative blockchain solutions. <a href="https://medium.com/cryptocurrency-scripts/churn-monetization-is-the-future-of-gamefi-2fac57ff0489" target="_blank">View Demo</a></li>
+      </ul>
+    </section>
 
     <footer>
       <p>References available upon request</p>
@@ -386,14 +477,14 @@ footer {
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const skillBars = document.querySelectorAll(".skill-bar");
-      const maxYears = 5; // Set the maximum years of experience
+      const maxYears = 5; // Maximum years of experience
   
       skillBars.forEach((skillBar) => {
         const experience = skillBar.getAttribute("data-experience");
         const skillLevel = skillBar.querySelector(".skill-level");
         const barWidth = (experience / maxYears) * 100;
-  console.log(`Experience: ${experience}, Bar Width: ${barWidth}%`);
-  skillLevel.style.width = `${barWidth}%`;
+        console.log(`Experience: ${experience}, Bar Width: ${barWidth}%`);
+        skillLevel.style.width = `${barWidth}%`;
       });
     });
   </script>
