@@ -1,14 +1,19 @@
-/* Define base variables for easy customization */
+/* Define base variables for a modern 2025 aesthetic - Revamped Palette */
 :root {
   --font-family: 'Roboto', sans-serif;
-  --bg-color: #0d1117;
-  --container-bg: #161b22;
-  --text-color: #c9d1d9;
-  --primary-color: #58a6ff;
-  --accent-color: #79c0ff;
-  --hover-accent: #a5d6ff;
-  --secondary-text: #8b949e;
-  --shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  --bg-color: #0D1117; /* GitHub dark default - deep, neutral */
+  --container-bg: #161B22; /* GitHub dark default - subtle contrast */
+  --text-color: #C9D1D9; /* GitHub dark default - readable light gray */
+  --primary-color: #58A6FF; /* GitHub dark default blue - familiar, good contrast */
+  --accent-color: #79C0FF; /* GitHub dark default lighter blue - for highlights/links */
+  --hover-accent: #A2D2FF; /* Even lighter blue for hover */
+  --secondary-text: #8B949E; /* GitHub dark default - standard muted gray */
+  --border-color: #30363D; /* GitHub dark default border */
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.6); /* Slightly refined shadow */
+  --container-padding: 3rem;
+  --section-spacing: 4.5rem;
+  --border-radius: 14px;
+  --rgb-primary-color: 88, 166, 255; /* Updated RGB for new primary color */
 }
 
 /* Global settings */
@@ -16,141 +21,325 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-family);
-  background: var(--bg-color);
+  /* Subtle gradient + noise texture */
+  background-color: var(--bg-color);
+  background-image: linear-gradient(145deg, var(--bg-color) 0%, #12171d 100%),
+                    url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="4" height="4" viewBox="0 0 4 4"%3E%3Cpath fill="%231a1f25" fill-opacity="0.08" d="M1 3h1v1H1V3zm2-2h1v1H3V1z"%3E%3C/path%3E%3C/svg%3E');
   color: var(--text-color);
-  line-height: 1.6;
-  font-size: 16px;
+  line-height: 1.8; /* Slightly increased line height */
+  font-size: 16.5px; /* Slightly increased base font size */
   margin: 0;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Container styles */
 .container {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 2rem;
+  max-width: 920px; /* Further increased width */
+  margin: 3.5rem auto;
+  padding: var(--container-padding);
   background: var(--container-bg);
   box-shadow: var(--shadow);
-  border-radius: 8px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.container:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out; /* Smoother transition */
 }
 
 /* Typography */
 h1, h2, h3 {
   color: var(--primary-color);
-  margin-bottom: 1rem;
+  margin-bottom: 1.6rem; /* Increased spacing */
+  font-weight: 600;
+  letter-spacing: 0.6px; /* Slightly more spacing */
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.9rem;
   font-weight: 700;
   text-align: center;
-  margin-top: 0;
+  margin-top: 1rem;
+  margin-bottom: 0.9rem;
 }
 
 h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--primary-color);
+  font-size: 2.3rem;
+  padding-bottom: 0.9rem;
+  /* Refined border */
+  border-bottom: 2px solid;
+  border-image: linear-gradient(to right, var(--primary-color) 30%, var(--accent-color) 70%) 1;
   display: flex;
   align-items: center;
+  margin-bottom: 2.5rem; /* More space */
 }
 
-h2 i {
-  margin-right: 0.5rem;
+h2 .icon {
+  margin-right: 0.9rem;
   color: var(--accent-color);
+  font-size: 2.1rem;
+  font-style: normal;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 h3 {
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin-bottom: 0.75rem;
+  font-size: 1.8rem;
+  margin-bottom: 1.3rem;
 }
 
-p {
-  margin-bottom: 1.5rem;
-  font-size: 1.1rem;
-  line-height: 1.8;
+.subsection-title {
+  font-size: 1.4rem;
+  color: var(--accent-color);
+  margin-top: 2.8rem;
+  margin-bottom: 1.4rem;
+  font-weight: 500;
+  border-bottom: 1px dashed var(--border-color); /* Dashed for variety */
+  padding-bottom: 0.6rem;
 }
+
+/* Specific styling for summary paragraphs */
+section:first-of-type > p { /* Target paragraphs in the first section (Summary) */
+  margin-bottom: 1.8rem; /* Explicitly increase spacing here */
+  font-size: 1.05rem; /* Slightly larger summary text */
+  line-height: 1.85;
+  max-width: 75ch; /* Increased from 70ch to match other sections */
+}
+/* General paragraphs in other sections */
+section:not(:first-of-type) > p {
+  margin-bottom: 1.3rem;
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 80ch;
+}
+/* Target paragraphs inside experience items */
+.experience-item > p:not(.details) {
+    margin-bottom: 1rem;
+    max-width: none;
+    font-size: 1rem; /* Ensure consistent size */
+}
+
 
 /* Links */
 a {
   color: var(--accent-color);
   text-decoration: none;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
+  position: relative;
+  transition: color 0.25s ease-in-out; /* Slightly different timing */
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1.5px; /* Slightly thicker underline */
+  bottom: -4px;
+  left: 0;
+  background-color: var(--hover-accent);
+  transition: width 0.3s ease-in-out;
 }
 
 a:hover {
   color: var(--hover-accent);
-  text-shadow: 0 0 5px var(--hover-accent);
+  text-decoration: none;
+}
+
+a:hover::after {
+  width: 100%;
 }
 
 /* Lists */
 ul {
-  margin-bottom: 1.5rem;
-  padding-left: 2rem;
+  margin-bottom: 1.8rem;
+  padding-left: 1.2rem;
+  list-style: none;
 }
 
 li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.9rem; /* More space between list items */
+  position: relative;
+  padding-left: 1.8rem; /* Even more space */
+}
+
+li::before {
+  content: ''; /* Use a border pseudo-element */
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+li:hover::before {
+  transform: scale(1.3);
+  background-color: var(--hover-accent);
+  box-shadow: 0 0 5px var(--hover-accent); /* Add glow */
 }
 
 /* Section spacing */
 section {
-  margin-bottom: 3rem;
+  margin-bottom: var(--section-spacing);
+}
+section:last-of-type {
+  margin-bottom: 0;
 }
 
 /* Header */
 header {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: var(--section-spacing);
+  padding-bottom: 2.5rem; /* Increased padding */
+  border-bottom: 1px solid var(--border-color);
 }
 
-header p {
-  font-size: 1.25rem;
+.headshot {
+  width: 150px; /* Even larger */
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto 1.8rem auto;
+  display: block;
+  border: 5px solid var(--primary-color);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6); /* Increased shadow */
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease; /* Bouncier transition */
+  position: relative;
+  z-index: 1;
+}
+.headshot:hover {
+    transform: scale(1.08) rotate(3deg);
+    box-shadow: 0 8px 25px rgba(var(--rgb-primary-color), 0.35);
+}
+.headshot:hover::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  border-radius: 50%;
+  background: conic-gradient(
+    red, orange, yellow, green, cyan, blue, violet, red
+  );
+  animation: spin 4s linear infinite;
+  pointer-events: none;
+  z-index: -1;
+  mix-blend-mode: screen;
+}
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.tagline {
+  font-size: 1.5rem; /* Larger tagline */
   color: var(--secondary-text);
+  margin-top: 0.6rem;
+  margin-bottom: 1.8rem;
+  font-weight: 400;
+}
+
+.contact-info a {
+  margin: 0 0.8rem; /* More spacing */
+  font-size: 1.1rem; /* Larger contact links */
+}
+
+/* Experience Item */
+.experience-item {
+  margin-bottom: 2.2rem; /* More spacing */
+  padding-left: 1.2rem;
+  border-left: 4px solid var(--border-color); /* Thicker border */
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0; /* Match container radius */
+  position: relative; /* For potential future pseudo-elements */
+}
+.experience-item:hover {
+    border-left-color: var(--primary-color);
+    background-color: rgba(var(--rgb-primary-color), 0.04); /* Slightly more pronounced hover */
+}
+
+.experience-item h3 {
+  margin-bottom: 0.5rem;
+}
+.experience-item .details {
+  color: var(--secondary-text);
+  font-size: 0.95rem; /* Slightly larger */
+  margin-bottom: 1rem; /* More space */
+  font-weight: 500;
+  display: block;
+}
+.experience-item ul {
+  margin-top: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 /* Skills Section */
 .skills-container {
   display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens if needed */
   justify-content: space-between;
-  gap: 2rem;
-  margin-bottom: 2rem;
+  gap: 2rem 3rem; /* Row gap, column gap */
+  margin-bottom: var(--section-spacing);
+  padding: 2rem 0;
+  border-top: 1px solid var(--border-color); /* Add separators */
+  border-bottom: 1px solid var(--border-color);
 }
 
 .skills-column {
   flex: 1;
+  min-width: 300px; /* Minimum width before wrapping */
 }
 
 .skill-item {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.6rem;
 }
 
 .skill-name {
-  width: 120px;
+  width: 120px; /* Adjusted width */
+  flex-shrink: 0; /* Prevent shrinking */
   font-weight: 500;
+  padding-right: 15px;
+  white-space: nowrap;
+  color: var(--text-color); /* Ensure name is bright */
+  display: flex; /* Use flex for logo alignment */
+  align-items: center;
+}
+
+.skill-logo {
+  margin-right: 8px; /* Space between logo and text */
+  font-size: 1.1em; /* Slightly larger logo */
+  display: inline-block;
+}
+
+/* New container for bar and years */
+.skill-bar-container {
+  display: flex;
+  align-items: center;
+  flex-grow: 1; /* Take remaining space */
+  min-width: 0; /* Prevent flex overflow issues */
 }
 
 .skill-bar {
-  position: relative;
-  width: 100%;
+  /* Removed position: relative */
+  /* Removed flex-grow: 1 */
+  flex-grow: 1; /* Allow bar to fill container space */
   height: 10px;
-  background: #30363d;
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 5px;
-  margin-top: 5px;
-  overflow: hidden;
+  overflow: hidden; /* Clip the level inside */
+  margin-right: 10px; /* Space before years text */
+  position: relative; /* Needed for absolute skill-level */
 }
 
 .skill-level {
@@ -158,48 +347,171 @@ header p {
   top: 0;
   left: 0;
   height: 100%;
-  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  /* Background/shadow defined per skill below */
+  background: var(--primary-color); /* Fallback */
   border-radius: 5px;
-  transition: width 1s ease;
+  transition: width 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
   width: 0;
+  /* Base shadow removed, specific shadows below */
 }
 
 .skill-years {
-  position: absolute;
-  top: -20px;
-  right: 0;
-  font-size: 12px;
-  color: var(--text-color);
+  /* Removed margin-left: 1rem */
+  font-size: 13px; /* Slightly larger years text */
+  color: var(--secondary-text);
+  font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0; /* Prevent years text from shrinking */
+}
+
+/* Language Specific Colors - Revamped */
+.skill-rust .skill-level {
+  background: linear-gradient(90deg, #DEA584, #B7410E);
+  box-shadow: 0 0 8px rgba(222, 165, 132, 0.5);
+}
+
+.skill-python .skill-level {
+  background: linear-gradient(90deg, #3776AB, #FFD43B);
+  box-shadow: 0 0 8px rgba(55, 118, 171, 0.4), 0 0 8px rgba(255, 212, 59, 0.4);
+}
+
+.skill-solidity .skill-level {
+  /* background: linear-gradient(90deg, #8a08c6, #00000077); Ethereum Purple/Gray */
+  background: linear-gradient(90deg, #627EEA, #4C64B9); /* Ethereum blue/purple tones */
+  box-shadow: 0 0 8px rgba(98, 126, 234, 0.5);
+}
+
+.skill-cpp .skill-level {
+  background: linear-gradient(90deg, #00599C, #004482); /* Refined blue */
+  box-shadow: 0 0 8px rgba(0, 89, 156, 0.5);
+}
+
+.skill-js .skill-level {
+  background: linear-gradient(90deg, #F7DF1E, #F0C000); /* Slightly refined yellow */
+  box-shadow: 0 0 8px rgba(247, 223, 30, 0.5);
+}
+
+.skill-crypto .skill-level {
+  background: linear-gradient(90deg, #22A9CC, #1E81A1); /* Cyan/Teal */
+  box-shadow: 0 0 8px rgba(34, 169, 204, 0.5);
+}
+
+.skill-zkp .skill-level {
+  /* background: linear-gradient(90deg, #8A2BE2, #DA70D6); Original Purple/Orchid */
+  background: linear-gradient(90deg, #A77DFF, #7E4FFF); /* Violet/Purple */
+  box-shadow: 0 0 8px rgba(167, 125, 255, 0.5);
+}
+
+.skill-azure .skill-level {
+  background: linear-gradient(90deg, #0078D4, #005A9E); /* Keep Azure blue */
+  box-shadow: 0 0 8px rgba(0, 120, 212, 0.5);
+}
+
+.skill-tee .skill-level {
+  /* background: linear-gradient(90deg, #fafafa, #f30505); Original White/Red */
+  background: linear-gradient(90deg, #1ABC9C, #16A085); /* Teal/Green for security */
+  box-shadow: 0 0 8px rgba(26, 188, 156, 0.5);
+}
+
+.skill-aws .skill-level {
+  background: linear-gradient(90deg, #FF9900, #EC7211); /* Refined AWS orange */
+  box-shadow: 0 0 8px rgba(255, 153, 0, 0.5);
+}
+
+/* Styles for Quantum Crypto skill (was missing in previous CSS) */
+.skill-quantum .skill-level {
+  background: linear-gradient(90deg, #E040FB, #BE2EDB); /* Vibrant Magenta/Purple */
+  box-shadow: 0 0 8px rgba(224, 64, 251, 0.5);
+}
+
+.skills-list li {
+  margin-bottom: 0.9rem;
+  padding-left: 0;
+}
+.skills-list li::before {
+  content: none;
+}
+
+.skills-list strong {
+  color: var(--primary-color);
+  font-weight: 600;
+  display: block; /* Make category title block */
+  margin-bottom: 0.5rem; /* Space after category title */
 }
 
 /* Education Items */
 .education-item {
-  margin-bottom: 1rem;
+  margin-bottom: 1.6rem;
+  background: rgba(var(--rgb-primary-color), 0.06);
+  border-left: 5px solid var(--primary-color); /* Thicker border */
+  padding: 1.4rem 1.6rem;
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease-in-out; /* Smooth all transitions */
+}
+.education-item:hover {
+    background: rgba(var(--rgb-primary-color), 0.1);
+    border-left-color: var(--hover-accent);
+    transform: translateX(5px); /* Slight shift on hover */
 }
 
 .education-item p {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.4rem; /* More space */
+  font-weight: 500;
+}
+.education-item strong {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.education-item em {
+  color: var(--secondary-text);
+  font-size: 0.95rem;
+  display: block;
+  margin-top: 0.4rem;
 }
 
 /* Footer */
 footer {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: var(--section-spacing);
+  padding-top: 2.5rem;
   color: var(--secondary-text);
-  font-size: 0.9rem;
+  font-size: 1rem; /* Slightly larger footer text */
+  border-top: 1px solid var(--border-color);
 }
 
 /* Responsive adjustments */
-@media (max-width: 640px) {
-  .skills-container {
-    flex-direction: column;
-  }
-  
+@media (max-width: 900px) {
   .container {
-    padding: 1rem;
+    max-width: 95%;
+    padding: 2.5rem; /* Adjust padding */
   }
-  
-  h1 {
-    font-size: 2rem;
+  /* Let flex-wrap handle skills container */
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 1.8rem;
+    margin: 1.8rem auto;
+    border-radius: 10px; /* Smaller radius */
   }
+  /* Adjust root vars for mobile */
+  :root {
+    --container-padding: 1.8rem;
+    --section-spacing: 3rem;
+  }
+
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.8rem; margin-bottom: 2rem;}
+  h3 { font-size: 1.4rem; }
+  section > p { font-size: 1rem; margin-bottom: 1.5rem; } /* Adjust summary para spacing for mobile */
+  .headshot { width: 120px; height: 120px; }
+  .tagline { font-size: 1.25rem; }
+  .contact-info a { font-size: 1rem; margin: 0 0.5rem; }
+  .skill-item { flex-wrap: wrap; } /* Allow skill name/bar to wrap */
+  .skill-name { width: auto; margin-bottom: 0.5rem; padding-right: 0;} /* Allow name full width */
+  .skill-bar { width: 100%; flex-grow: 0; } /* Bar takes full width */
+  .skill-years { margin-left: 0; margin-top: 0.5rem; } /* Years below bar */
+  li { padding-left: 1.4rem;}
+  li::before { top: 5px;}
 }
