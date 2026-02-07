@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build outputs
+build/
+dist/
+.next/
+.out/
+coverage/
+.cache/
+.parcel-cache/
+
+# OS
+.DS_Store
+
+# Env files
+.env
+.env.*
+
+# Editors
+.idea/
+*.swp
+
+# Misc
+*.local
