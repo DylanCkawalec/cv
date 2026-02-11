@@ -16,7 +16,7 @@ In this article, I show you which tools are absolutley needs and some of the ste
 - tips for making your podcast better
 - A pretty good idea of how to make a professional podcast on a really low budget. 
 
-# What We need 
+# What We need
 **Microphone** : Yetti / Yeticaster, later upgrade to XLR mic that plugs into an audio mixer. The Yeti or Yeticaster microphone and Logitech G Pro headset are both popular choices for podcasting. 
 
 **Headset**: Logitech G Pro, or other gaming headsets from Blue Microphones with USB. 
