@@ -1,0 +1,279 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dylan Christopher Kawalec — Résumé (Concise / Deliverables-First)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[10pt]{article}
+
+% ---------- Layout ----------
+\usepackage[margin=0.62in]{geometry}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\usepackage{microtype}
+\usepackage{changepage}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{wrapfig}
+\usepackage{iftex}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[normalem]{ulem} % for underlined links
+\usepackage{fontawesome5}
+\usepackage{fancyhdr}
+\usepackage[absolute,overlay]{textpos} % <-- Added for absolute positioning
+
+% ---------- Fonts (XeLaTeX: Times-like, TeX Gyre Termes with fallbacks) ----------
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\IfFontExistsTF{TeX Gyre Termes}{%
+  \setmainfont{TeX Gyre Termes}%
+}{%
+  \IfFontExistsTF{Times New Roman}{%
+    \setmainfont{Times New Roman}%
+  }{%
+    \setmainfont{Latin Modern Roman}%
+  }%
+}
+
+% ---------- Colors ----------
+\definecolor{TitleBlue}{HTML}{79C0FF}
+\definecolor{HighlightGray}{HTML}{374151}
+\definecolor{SoftRule}{HTML}{D1D5DB}
+\definecolor{SteelGrey}{HTML}{4A5568}
+
+% Make bold text render as highlight color (dark grey).
+\let\resumeoldtextbf\textbf
+\renewcommand{\textbf}[1]{\textcolor{HighlightGray}{\resumeoldtextbf{#1}}}
+
+% ---------- Hyperlinks ----------
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=TitleBlue,
+  linkcolor=TitleBlue,
+  citecolor=TitleBlue
+}
+\newcommand{\link}[2]{\href{#1}{\textcolor{TitleBlue}{\uline{#2}}}}
+
+% ---------- Headings ----------
+\titleformat{\section}
+  {\bfseries\large\color{SteelGrey}}
+  {}{0pt}{}
+  [\vspace{-2pt}\color{SoftRule}\titlerule\vspace{2pt}]
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+
+% ---------- Lists ----------
+\setlist[itemize]{leftmargin=*, itemsep=0.25em, topsep=2pt, parsep=0pt}
+
+% ---------- Header / footer ----------
+\pagestyle{fancy}
+\fancyhf{}
+% \rhead{\small\textcolor{HighlightGray}{\thepage}} % Removed page number
+\renewcommand{\headrulewidth}{0pt}
+
+% ---------- Entry helpers ----------
+\newcommand{\entry}[3]{%
+  \noindent\begin{tabularx}{\linewidth}{@{}Xr@{}}
+    {\resumeoldtextbf{\textcolor{HighlightGray}{#1}} \hspace{0.35em} \textcolor{HighlightGray}{\emph{#2}}} &
+    {\small\textcolor{HighlightGray}{#3}} \\
+  \end{tabularx}\vspace{-2pt}
+}
+\newcommand{\subline}[1]{\noindent{\small\textcolor{HighlightGray}{#1}}\vspace{1pt}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%=============================================================================
+% Contact
+%=============================================================================
+
+\begin{minipage}[t]{\linewidth}
+  % Name and Title
+  {\Huge \resumeoldtextbf{Dylan Kawalec}}\par\vspace{1pt}
+  {\large \textcolor{HighlightGray}{\textbf{Founding Engineer} \textbar{} \textbf{Principal Architect}}}\par
+  % Expertise Row
+  \vspace{3pt}
+  {\small
+    \textcolor{HighlightGray}{
+      \textbf{Confidential Compute \& Privacy} (TEE / SGX / TDX, ZK) \\
+      Confidential AI Infrastructure \textbullet{} TDX Agent Runtime \textbullet{} Remote Attestation \textbullet{} ZK Authentication \\
+      Deep Tech DevRel Lead \textbullet{} Developer Platform Enablement
+    }
+  }\par
+  % Education
+  \vspace{3pt}
+  {\footnotesize
+    \textcolor{HighlightGray}{
+      \textbf{B.S. Computer Science}, Western Governors University \textbullet{}
+      \textbf{A.A.S. Computer Programming}, MiraCosta College
+    }
+  }\par
+  % Contact
+  \vspace{4pt}
+  {\small
+    \noindent
+    \textcolor{TitleBlue}{\footnotesize\faIcon{envelope}}\,\link{mailto:dylankawalec@gmail.com}{dylankawalec@gmail.com} \hspace{0.75em}\textbar{}\hspace{0.75em}
+    \textcolor{TitleBlue}{\footnotesize\faIcon{linkedin}}\,\link{https://linkedin.com/in/dylankawalec}{linkedin.com/in/dylankawalec} \hspace{0.75em}\textbar{}\hspace{0.75em}
+    \textcolor{TitleBlue}{\footnotesize\faIcon{github}}\,\link{https://github.com/DylanCkawalec}{github.com/DylanCkawalec} \\
+    \textcolor{TitleBlue}{\footnotesize\faIcon{globe}}\,\link{https://dylanckawalec.github.io/cv}{dylanckawalec.github.io/cv} \hspace{0.75em}\textbar{}\hspace{0.75em}
+    \textcolor{HighlightGray}{SF Bay Area \textbullet{} NYC}
+  }\par
+\end{minipage}
+\normalsize
+
+
+%=============================================================================
+% Summary (short + direct)
+%=============================================================================
+\section*{Professional Summary}
+\textbf{I build and ship confidential systems:} TEE-backed services (SGX/TDX), zero-knowledge authentication, and privacy-first blockchain infrastructure.\par
+\textbf{Current build focus:} confidential AI runtimes on TDX/SGX with remote attestation, zero-trust verification boundaries, and verifiable execution.\par
+\textbf{Execution model:} founding-engineer architecture with hands-on delivery across APIs, distributed services, Solidity smart contracts, and formal specifications.\par
+\textbf{Deep Tech DevRel function:} documentation, reference implementations, and partner onboarding that convert architecture into shipped integrations.
+
+%=============================================================================
+% Focus Areas / Tooling
+%=============================================================================
+\section*{Focus Areas \& Tooling}
+\textbf{Compute/Security:} Intel SGX/TDX (Fortanix, dstack/TEE), Phala Cloud remote attestation, enclave TLS, MPC, threshold signing.\par
+\textbf{ZK/Cryptography:} ZK authentication patterns, commitments/XOR-proofs, witness encryption concepts (high-level), BFT protocol design, zero-trust verification.\par
+\textbf{Languages/Frameworks:} Python (8+ years: PyTorch, Matplotlib, NumPy, SymPy, cryptography, gmpy), Rust (Tokio, Actix, wagyu, serde), Solidity, Go, Node.js/TypeScript/JavaScript.\par
+\textbf{Systems Methods:} TLA+/PlusCal, ORM/concurrency/distributed service design, API and microservice architecture \textbar{} Docker/GitHub Actions/Terraform \textbar{} Postgres/Redis.\par
+\textbf{Automation Tooling:} LaTeX, Codex, Warp OZ agents with \link{https://github.com/DylanCkawalec/warp-engine}{Warp Engine}, Cursor IDE, n8n workflows with \link{https://github.com/DylanCkawalec/opgrok}{opgrok}, CoreThink API, Sonnet 4.5.
+
+%=============================================================================
+% Selected Deliverables (builds first)
+%=============================================================================
+\section*{Selected Builds (Shipped / Demonstrated)}
+\begin{itemize}
+  \item \textbf{Confidential terminal agents:} \link{https://github.com/DylanCkawalec/DI}{DI} (Solidity ERC-8004 interface) and \link{https://github.com/DylanCkawalec/warp-engine}{Warp Engine} for attested TDX private-agent execution.
+  \item \textbf{Decentralized front-end infrastructure:} \link{https://github.com/osmosis-labs/defe}{defe} Rust CLI for SGX/Fortanix provisioning, enclave TLS, and threshold signing to reduce operator trust risk.
+  \item \textbf{Protected password entry:} \link{https://eni6ma.gitbook.io/eni6ma/}{ENI6MA demo} spanning web, CLI, and on-chain verification flows under confidential research constraints.
+  \item \textbf{Zero-trust verifier network:} \link{https://github.com/DylanCkawalec/cosmic-hack/blob/main/README.md}{cosmic-hack} prototype for TEE-only execution and ZK-style boundary verification.
+  \item \textbf{Learned compression R\&D:} Evoformer-inspired plus zstd pipeline for deterministic, verifiable transforms over structured and unstructured binary data.
+\end{itemize}
+
+%=============================================================================
+% Experience
+%=============================================================================
+\section*{Professional Experience}
+
+\entry{Head of Developer Relations \& Solutions Architect}{Phala Network}{May 2025 -- Dec 2025 (FT)}
+\subline{Confidential compute (TEE) platform: Phala Cloud / dstack workflows}
+\begin{adjustwidth}{0.25in}{0in}
+\begin{itemize}
+  \item Wrote Phala Cloud dstack/TEE documentation and reference flows that moved partner teams from evaluation to production confidential-compute deployment.
+  \item Led confidential AI rollout by deploying private agents inside Intel TDX via dstack with attestation-backed execution guarantees.
+  \item Implemented \link{https://github.com/DylanCkawalec/DI}{DI} Solidity ERC-8004 contracts and built \link{https://github.com/DylanCkawalec/warp-engine}{Warp Engine} for private terminal-agent orchestration.
+  \item Presented dstack/TEE workflows at the Confidential Computing Consortium and onboarded partners, supporting Linux Foundation acceptance through a 17/17 vote.
+  \item Grew dstack repository visibility from 34 to 400+ GitHub stars in six months through docs, demos, and integration support.
+\end{itemize}
+\end{adjustwidth}
+
+\entry{Founding Engineer / Principal Architect (Independent Researcher in Cybernetics)}{ENI6MA Cybernetics \textbar{} Cosmic Inc. \textbar{} ENI6MA LLC}{Summer 2024 -- Jan 2026}
+\subline{Confidential R\&D: zero-trust verification, ZK authentication, deterministic AI safeguards (high-level public synopsis)}
+\begin{adjustwidth}{0.25in}{0in}
+\begin{itemize}
+  \item Designed zero-trust authentication architecture for human and AI access, combining TEE-only execution, remote attestation, and ZK verification boundaries.
+  \item Authored and handed over a provisional patent package, private codebase, demonstrations, and confidential research materials at the end of the engagement.
+  \item Wrote 24+ private research papers that formalized systems and methods for zero-trust authentication and verification under confidentiality constraints.
+  \item Built passwordless verifier prototypes and supported a \textbf{\$168K} friends-and-family raise through technical narrative, architecture reviews, and demos.
+\end{itemize}
+\end{adjustwidth}
+
+\entry{Research \& Development Engineer}{Osmosis Foundation}{Apr 2024 -- Sep 2024 (Contract)}
+\subline{Cosmos infra R\&D: decentralized front ends, enclave deployments, signing/neutrality}
+\begin{adjustwidth}{0.25in}{0in}
+\begin{itemize}
+  \item Delivered \link{https://github.com/osmosis-labs/defe}{defe} as a Rust CLI with Fortanix SGX workflows for secure, repeatable decentralized front-end provisioning.
+  \item Implemented enclave TLS key issuance and threshold-signing partitioning to reduce single-operator trust assumptions in Osmosis front-end operations.
+  \item Authored SGX deployment guidance for edge operations, giving Cosmos teams a direct path from prototype setups to production-style environments.
+\end{itemize}
+\end{adjustwidth}
+
+\entry{Head of Developer Relations}{GOAT Network (BTC L2)}{Jul 2024 -- Jan 2025 (Contract)}
+\subline{BTC L2 enablement: docs, integrations, workshops}
+\begin{adjustwidth}{0.25in}{0in}
+\begin{itemize}
+  \item Authored \link{https://docs.goat.network/}{GOAT Network technical documentation} for zkMIPS, sequencer APIs, and EVM/Solidity integration paths for BTC L2 teams.
+  \item Delivered the \link{https://fargoat.vercel.app/founder/contracts/request-for-proposal}{Founders Club MVP} and onboarded 100+ founders through structured deployment workflows.
+  \item Built and managed \textbf{40+ ecosystem partnerships}, including major infrastructure providers listed in the \link{https://www.goat.network/ecosystem}{GOAT ecosystem directory}.
+  \item Led BTC L2 workshops at BTC Nashville and Staking Summit Singapore, then translated workshop feedback into integration runbooks.
+\end{itemize}
+\end{adjustwidth}
+
+\entry{Head of Developer Relations}{Findora / Discreet Labs (now Fractal Network)}{May 2022 -- Oct 2022 (Contract)}
+\subline{Confidential EVM + ecosystem growth}
+\begin{adjustwidth}{0.25in}{0in}
+\begin{itemize}
+  \item Led DevRel for Findora's confidential EVM stack, delivering validator, bridging, and privacy workflow education for global ecosystem teams.
+  \item Onboarded \textbf{80+ validators} into Findora node operations through direct setup support, strengthening network participation during Series A visibility.
+  \item Supported ETHAmsterdam launch narrative during a \textbf{\$12M+} token raise window, alongside Yellow Submarine and FairySwap ecosystem rollouts.
+\end{itemize}
+\end{adjustwidth}
+
+\entry{CTO \& Principal Engineer}{Invo Technologies}{Apr 2023 -- Jan 2025 (Contract)}
+\subline{Substrate + privacy rail R\&D; developer monetization tooling}
+\begin{adjustwidth}{0.25in}{0in}
+\begin{itemize}
+  \item Built the \link{https://ourinvo.com/}{Invo platform} for game-economy monetization and analytics, giving studios tooling for revenue and player-economy visibility.
+  \item Designed a privacy-preserving exchange concept for gaming economies using Substrate architecture, Aleo privacy rails, and EVM interoperability requirements.
+  \item Designed \textbf{AIMBC / Yor Bridge} and implemented Solidity contract interfaces for MP-HTLC settlement with OAP attestations and Aleo-mediated verification.
+  \item Led \link{https://github.com/Invo-Technologies/poems}{POEMS (ZK--TEE research)} implementation, which won Aleo Best Tech 2023 and supported a \textbf{\$50K} Aleo Foundation grant.
+\end{itemize}
+\end{adjustwidth}
+
+\entry{Independent Research Studio (contracts)}{Chaotic Beauty LLC}{Nov 2020 -- Jan 2026}
+\subline{C-Corp for R\&D, solutions architecture, DevRel contracts}
+\begin{adjustwidth}{0.25in}{0in}
+\begin{itemize}
+  \item Ran a contract studio for 6+ month engagements across blockchain teams, covering security architecture, integrations, and developer platform enablement.
+  \item Delivered MPC/threshold-signing custody patterns and key-management hardening to reduce operational key exposure in production digital-asset systems.
+\end{itemize}
+\end{adjustwidth}
+
+\subline{\textbf{Earlier:} Tesla (Model 3 Technician; top internal Da Vinci dexterity score) \textbullet{} Zygo (IBF Technician; ion-beam figuring lasers for precision optics on teams connected to James Webb telescope programs) \textbullet{} BNB Chain Labs (US Tech Evangelist) \textbullet{} Harmony (Developer Captain / DAO Governor; \$100K DAO funding; 700+ dev onboarding) \textbullet{} Bridge Builders DAO (Ethereum ecosystem consulting).}
+
+%=============================================================================
+% Integrated evidence page
+%=============================================================================
+\section*{Recognition, Credentials \& Publications}
+\textbf{Selected Awards}
+\begin{itemize}
+  \item \textbf{ETHGlobal SF 2024:} \link{https://ethglobal.com/showcase/zend-it-0f93v}{Zend It} --- Ledger Tech Award (1st), Polygon Best zkApp (1st).
+  \item \textbf{ETHDenver 2024:} AOS \emph{Hacker Deathmatch}.
+  \item \textbf{VeChain \(\times\) EasyA 2024:} \link{https://www.linkedin.com/posts/easya_if-youve-been-following-on-twitter-youll-activity-7214575742167195648-wyEf}{PowerUp} (2nd).
+  \item \textbf{Aleo 2023:} POEMS (Best Tech).
+  \item \textbf{ETHAmsterdam 2022:} \link{https://ethglobal.com/showcase/degenbox-zh7pp}{DegenBox} --- \textbf{EPNS --- Best Use of Frontend SDK:} \textbf{Boba Network} --- Best Use
+  \item \textbf{KCACTF 2018:} Best Partner (Theatre) --- \link{https://www.imdb.com/name/nm8188217/}{IMDB}
+\end{itemize}
+
+\textbf{Credentials}
+\textbf{SimpliLearn / RareSkills:} Blockchain Engineering Fellow (May 2023) \textbullet{}
+\textbf{Zero Knowledge University (Harmony ONE Foundation):} Zero Knowledge University Developer (Mar 2022), 
+\link{https://github.com/TalDerei/ZKU?tab=readme-ov-file}{ZKU program repo}\par
+
+\textbf{Selected Writing, Docs \& Research}
+\begin{itemize}
+  \item \link{https://phalanetwork.mintlify.app/docs}{Phala Cloud / dstack Documentation Suite}
+  \item \link{https://docs.goat.network/}{GOAT Network Protocol Documentation}
+  \item \link{https://coin.fi/research}{CoinFi Research Archive}
+  \item \link{https://eni6ma.gitbook.io/eni6ma/}{ENI6MA Research Documentation (public excerpts)}
+  \item \link{https://github.com/DylanCkawalec/Aleo-Developer-Enablement-Strategy}{Aleo Developer Enablement Strategy}
+  \item \link{https://medium.com/cryptocurrency-scripts/churn-monetization-is-the-future-of-gamefi-2fac57ff0489}{Churn Monetization is the Future of GameFi}
+  \item \link{https://medium.com/cryptocurrency-scripts/the-future-of-gamefi-and-gaming-invos-dlal-and-the-digital-economy-0d6a88c7de3a}{The Future of GameFi and Gaming: Invo's DLAL and the Digital Economy}
+  \item \link{https://invotechnologies.medium.com/bridging-blockchain-and-gaming-with-invos-default-currency-solution-113dedaace96}{Bridging Blockchain and Gaming with Invo's Default Currency Solution}
+\end{itemize}
+
+\textbf{Selected Talks, Podcast Hosting \& Public Proofs}
+\begin{itemize}
+  \item \link{https://blackboxpodcast.com/}{Host, The Blackbox Podcast} --- Sponsored by Phala Network; independent guest interviews and deep dives across privacy, AI, and blockchain.
+  \item \link{https://www.youtube.com/watch?v=o1TY6sjMOek\&t=119s}{DevMos 2024: Decentralized Front Ends Workshop}
+  \item \link{https://www.youtube.com/watch?v=G7xcsoXydTg}{Staking Summit: GOAT Network BTC L2 Workshop}
+  \item \link{https://youtu.be/wPqFvNzRZHg?si=c4Atvb58sczYqTd}{Bread N' Butter Podcast (BNB Chain Labs)}
+  \item \link{https://www.youtube.com/watch?v=qmSTNj12Rbc}{Cosmic Public Proof (YouTube)} --- published a carrier-audio proof flow with permalinked verification context in the video description.
+\end{itemize}
+
+\vspace{2pt}
+{\small\textcolor{HighlightGray}{Note: ENI6MA/Cosmic research is summarized at a high level under confidentiality agreements; Dylan Rosario is the only named research collaborator.}}
+
+\end{document}

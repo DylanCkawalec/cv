@@ -3,534 +3,204 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dylan Kawalec 2026 CV</title>
-  <!-- Link to Custom Styles -->
+  <title>Dylan Kawalec — CV</title>
   <link rel="stylesheet" href="styles.css">
-  <!-- Tailwind CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
-  <style>
-    /* Rainbow spiral hover for headshot wrapper */
-    .headshot-wrapper {
-      display: inline-block;
-      position: relative;
-      z-index: 0;
-    }
-    .headshot-wrapper .headshot {
-      display: block;
-      border-radius: 50%;
-      position: relative;
-      z-index: 1;
-    }
-    .headshot-wrapper:hover::before {
-      content: '';
-      position: absolute;
-      top: -5px;
-      left: -5px;
-      width: calc(100% + 10px);
-      height: calc(100% + 10px);
-      border-radius: 50%;
-      background: conic-gradient(red, orange, yellow, green, cyan, blue, violet, red);
-      animation: spin 4s linear infinite;
-      pointer-events: none;
-      z-index: -1;
-      mix-blend-mode: screen;
-    }
-    @keyframes spin { to { transform: rotate(1turn); } }
-  </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Header -->
-    <header>
-      <div class="headshot-wrapper">
-        <img src="headshot-cartoon.png" alt="Dylan Kawalec Headshot" class="headshot">
+  <main class="page">
+    <header class="masthead">
+      <div class="masthead-text">
+        <h1>Dylan Kawalec</h1>
+        <p class="primary-title">Founding Engineer | Principal Architect</p>
+        <p class="expertise"><strong>Confidential Compute &amp; Privacy</strong> (TEE / SGX / TDX, ZK)</p>
+        <p class="expertise">Confidential AI Infrastructure • TDX Agent Runtime • Remote Attestation • ZK Authentication</p>
+        <p class="expertise">Deep Tech DevRel Lead • Developer Platform Enablement</p>
+        <p class="education"><strong>B.S. Computer Science</strong>, Western Governors University • <strong>A.A.S. Computer Programming</strong>, MiraCosta College</p>
+        <p class="contact">
+          <a href="mailto:dylankawalec@gmail.com">dylankawalec@gmail.com</a>
+          <span>|</span>
+          <a href="https://linkedin.com/in/dylankawalec" target="_blank" rel="noopener noreferrer">linkedin.com/in/dylankawalec</a>
+          <span>|</span>
+          <a href="https://github.com/DylanCkawalec" target="_blank" rel="noopener noreferrer">github.com/DylanCkawalec</a>
+          <br>
+          <a href="https://dylanckawalec.github.io/cv" target="_blank" rel="noopener noreferrer">dylanckawalec.github.io/cv</a>
+          <span>|</span>
+          SF Bay Area • NYC
+        </p>
       </div>
-      <h1>Dylan Christopher Kawalec</h1>
-      <p class="tagline">Blockchain Research Engineer &amp; Head of Developer Relations — ZKP · TEE · ConfidentialAI</p>
-      <div class="contact-info">
-        <a href="mailto:dylankawalec@gmail.com">dylankawalec@gmail.com</a> |
-        <a href="https://www.linkedin.com/in/dylankawalec/" target="_blank">LinkedIn</a> |
-        <a href="https://github.com/DylanCkawalec" target="_blank">GitHub</a>
-      </div>
+      <figure class="photo-frame">
+        <img src="download.jpg" alt="Dylan Kawalec headshot">
+      </figure>
     </header>
 
-    <!-- Professional Summary -->
     <section>
-      <h2><span class="icon">&#x1F464;</span> Professional Summary</h2>
-      <p>
-        I've dedicated my career to building privacy-preserving systems with Zero-Knowledge Proofs (ZKPs) and Trusted Execution Environments (TEEs). Over the past 5+ years, I've worked on confidential AI, secure blockchain infrastructure, and privacy tools across Ethereum, Bitcoin L2s, Cosmos, and Polkadot.
-      </p>
-      <p>
-        At Phala Network, where I was Head of Developer Relations, I helped launch some of the earliest confidential AI agents that run fully encrypted on-chain, built TEE-based private compute to keep models and data protected end-to-end, and worked on partnerships that brought these tools into web2 and web3 projects.
-      </p>
-      <p>
-        I also contributed to two filed patents on zero-trust systems for running protected code in TEEs—using lattice-based hashing, fully homomorphic encryption, and ZKPs to enable verifiable computation without exposing any sensitive data.
-      </p>
-      <p>
-        While at Invo Technologies (as former CTO), I built privacy-preserving in-game currency exchange systems on Substrate that securely funded wallets and handled decentralized swap routing.
-      </p>
-      <p>
-        I helped ship a fully private EVM stack at Discreet Labs/Findora for confidential transactions, and created a decentralized frontend framework for Osmosis that stays credibly neutral (using dstack) and performs well at the edge.
-      </p>
+      <h2>Professional Summary</h2>
+      <p><strong>I build and ship confidential systems:</strong> TEE-backed services (SGX/TDX), zero-knowledge authentication, and privacy-first blockchain infrastructure.</p>
+      <p><strong>Current build focus:</strong> confidential AI runtimes on TDX/SGX with remote attestation, zero-trust verification boundaries, and verifiable execution.</p>
+      <p><strong>Execution model:</strong> founding-engineer architecture with hands-on delivery across APIs, distributed services, Solidity smart contracts, and formal specifications.</p>
+      <p><strong>Deep Tech DevRel function:</strong> documentation, reference implementations, and partner onboarding that convert architecture into shipped integrations.</p>
     </section>
 
-    <!-- Professional Experience -->
     <section>
-      <h2><span class="icon">&#x1F4BC;</span> Past Experience</h2>
-      <!-- Most Recent Roles -->
-      <div class="experience-item">
-        <h3>Founder & CEO | Chaotic Beauty LLC</h3>
-        <span class="details">Nov 2020 - Present | California, United States · Remote</span>
-        <ul>
-          <li>Cryptocurrency security and digital asset management Company. Use MPC and TEE-based custody for decentralized key management and secure storage of personal and client digital assets.</li>
-          <li>Specify System security for wallet-as-a-service modules, treasury dashboards, and APIs for crypto fund managers and DeFi protocols. Specialized areas include:</li>
-          <ul>
-            <li>Multi-layer DAO treasury management and portfolio tracking.</li>
-            <li>Automated token vesting and distribution workflows using ERC-8004 & x402 gateways.</li>
-            <li>Enclave protected key managers for smart contract private key rotation.</li>
-            <li>Consultation for teams looking to integrate Zero Knowledge Proof systems into their tokenized portfolio for greater control over asset</li>
-          </ul>
-          <li>Personally, I provide developer relations, cryptocurrency security advisory, and hands-on architectural guidance for clients working with decentralized infrastructure.</li>
-        </ul>
-      </div>
-      <div class="experience-item">
-        <h3>Head of Developer Relations | Phala Network</h3>
-        <span class="details">May 2025 - Dec 2025 · 8 mos | San Diego, California · Remote</span>
-        <ul>
-          <li>Led developer relations and partnerships for Phala Cloud, integrating confidential-computing tools across web2 and web3 to keep AI models and applications private using TEE-based Confidential AI Containers (dstack/TEE).</li>
-          <li>Brought partnerships to Phala Cloud: Akave, Rift.trade, Gaia.ai, zkVerify, TinyCloud, OORT, SpaceComputer, Railgun, Fairblock, Anoma, Temporai, StorJ, Self Protocol, Zeko, DIN Key Protocol, Nexus, Aquanode. Managed communications and developer assistance for several dozen additional clients including Near, Uniswap, Blormmy, Flashbots, OpenZeppelin, Rabbi Finance, Lido, Succinct Labs.</li>
-          <li>Wrote dstack/TEE documentation for Phala Network – <a href="https://phalanetwork.mintlify.app/docs" target="_blank">phalanetwork.mintlify.app/docs</a></li>
-          <li>Managed the Blackbox Podcast (blackboxpodcast.com), hosting discussions on Zero Trust, privacy, confidential compute, and safe AGI.</li>
-          <li>Supported enterprise and independent developers in integrating TEE (dstack) into their projects and cloud infrastructure. Built one of the first ERC-8004 TEE agents—a private audit and security code agent that runs fully encrypted in a TEE. Created the first decentralized interface for ERC-8004 (<a href="https://github.com/DylanCkawalec/DI" target="_blank">DI</a>). Developed <a href="https://github.com/DylanCkawalec/warp-engine" target="_blank">Warp Engine</a> for AI agent orchestration in Warp Terminal. Owner of erc-8004.com.</li>
-        </ul>
-      </div>
-      <div class="experience-item">
-        <h3>Head of Developer Relations | GOAT Network</h3>
-        <span class="details">Jul 2024 - Jan 2025 · 7 mos | United States · Hybrid</span>
-        <ul>
-          <li>Led Developer Relations for the BTC Layer 2 initiative, supporting the launch of a BTCfi platform focused on cost-effective yield generation.</li>
-          <li>Developed zkMIPS and Sequencer API infrastructure documentation, connected 40+ network partnerships (API3, DIA, Reclaim, Anchor), and led development of the ecosystem's Program Accelerator (GOAT Founders Club).</li>
-          <li>Served as primary contact for network integrations, guiding Ethereum applications through deployment on the Bitcoin Layer 2—working alongside the business development and growth team.</li>
-          <li>Led live workshops in Thailand, Singapore, and the United States during BTC Nashville. Recorded talks available online (YouTube).</li>
-          <li>Featured in Foresight News – <a href="https://foresightnews.pro/article/detail/68497" target="_blank">Article</a></li>
-        </ul>
-      </div>
-      <div class="experience-item">
-        <h3>Research & Development Engineer | Osmosis Foundation</h3>
-        <span class="details">Apr 2024 - Sep 2024 · 6 mos | San Francisco Bay Area · Hybrid</span>
-        <p><a href="https://www.osmosis.zone" target="_blank">www.osmosis.zone</a></p>
-        <ul>
-          <li>R&D on smart account abstractions and decentralized front ends for Osmosis / Cosmos application chains. Contributed to <a href="https://github.com/osmosis-labs/defe" target="_blank">defe</a> — Rust CLI for secure DFE setup with SGX, Fortanix, DNSSEC, and MPC threshold signing.</li>
-          <li>Designed embedding tooling for SGX and TDX servers. Built TLS certificate management systems, MPC threshold signing, IPFS endpoints, Fortanix Rust-SGX applications, and React/TS front-end libraries.</li>
-          <li>Designed an architecture for DNS resolution through a multi-signature wallet using anycast controls over Azure, IBMz, and Cloudflare servers.</li>
-          <li>Authored Rust-SGX development guide for secure DFE deployment: <a href="writings/enclave.md" target="_blank">Secure Server Setup for Rust-SGX (Fortanix EDP)</a></li>
-          <li>Dev chat group: <a href="https://t.me/sgxpals" target="_blank">https://t.me/sgxpals</a></li>
-        </ul>
-      </div>
-      <div class="experience-item">
-        <h3>Reserach Fellow | ENI6MA Cybersecurity LLC</h3>
-        <span class="details">Apr 2024 - Apr 2025 · 10 mos | Science and Technology</span>
-        <ul>
-          <li>Conducted independent R&D on a human-verifiable authentication framework. Research documented at <a href="https://eni6ma.gitbook.io/eni6ma/" target="_blank">eni6ma.gitbook.io/eni6ma</a>.</li>
-          <li>Built cryptographic prototypes in Rust, C, and Python with documentation focused on post-quantum authentication methods. At Eni6ma, focused on prime number generation and Mobius Loops for entropy and prime mixing in dense spaces.</li>
-          <li>Developed zero-knowledge interactive proofs using holographic manifold projections—no secret exposure during verification. Designed topological collapse signing sequences (akin to SHA3) using deterministic offsets and non-deterministic primes. This augments rather than replaces classical ZK.</li>
-          <li>Created Cosmic (independent research): a patent-pending zero-trust architecture for execution in TEEs only—specifically for generating quantum OTPs for secrets using zero-knowledge machine learning. Systems and methods include non-deterministic prime entropy detection, zeta-zero lattice embedded hashing, relativistic lattice hash sequencing, and topological braiding for collapsing commitments across manifold projections over higher- and lower-dimensional hyperplanes via Hamiltonian trace-like tensor objects, with precision derived from ML and deterministic evoformation. Proof of concept: ZK proof embedded in media encoding—hidden audio survives platform translation and playback on YouTube, Spotify, and SoundCloud (<a href="https://github.com/DylanCkawalec/cosmic-hack/blob/main/README.md" target="_blank">cosmic-hack</a>, <a href="https://www.youtube.com/watch?v=qmSTNj12Rbc" target="_blank">YouTube demo</a>).</li>
-          <li>Work under Eni6ma's non-provisional license has been referenced in multiple private companies; subject to CIIAA and NDA disclosure agreements.</li>
-          <li>Provided demonstrations, licensing guidance, and integration support to the board and external partners.</li>
-        </ul>
-      </div>
-      <div class="experience-item">
-        <h3>Chief Technology Officer & Principal Software Engineer | Invo Technologies Inc.</h3>
-        <span class="details">Apr 2023 - Jan 2025 · 1 yr 10 mos | Remote · United States</span>
-        <p><a href="https://ourinvo.com/" target="_blank">ourinvo.com</a></p>
-        <ul>
-          <li>Built a monetization platform for game developers, providing an additional revenue stream and player economy analytics via Invo AI.</li>
-          <li>Designed a privacy-preserving confidential exchange for video games using cryptographically secure payment channels—in-game function keys connect game currency to blockchain tokens.</li>
-          <li>Developed the Invo SDK on <a href="https://docs.polkadot.com/reference/parachains/" target="_blank">Polkadot Substrate</a>, enabling interoperable digital economies. Players bridge currency between games through the decentralized exchange engine (game currency router). Privacy rail built on <a href="https://aleo.org/" target="_blank">Aleo</a> zero-knowledge proofs.</li>
-          <li>Implemented <a href="https://github.com/Invo-Technologies/poems" target="_blank">POEMS</a> (Proof of the Effective Majority Staked)—a ZK-TEE mechanism for validating shared secrets and verifiable off-chain DEX settlement on-chain. Aleo Best Tech award, 2023. $50,000 Aleo Foundation grant (<a href="https://www.linkedin.com/posts/joanna-zeng-4a85bb5_on-the-floor-with-jordi-and-ming-from-polygon-activity-7171955161475584000-IK6F" target="_blank">proof</a>).</li>
-          <li>System generates revenue from both positive and negative player churn across participating game economies.</li>
-        </ul>
-      </div>
-      <div class="experience-item">
-        <h3>U.S. Technology Evangelist | BNB Chain Labs</h3>
-        <span class="details">Nov 2022 - May 2023 · 7 mos | California, United States · Hybrid</span>
-        <ul>
-          <li>Marketing: Developer Evangelism in Solidity/Web3/BNB-Blockchain Education. Host of the Bread N' Butter Podcast, a way to directly engage web3 developers.</li>
-          <li>Development: Zero-Knowledge rollup and decentralized storage network development workshops, technical documentation for on-chain ordering for applications.</li>
-          <li>Hackathons: zkBNB developer and remote technical workshop mentor. Recognized as the "1st USA BNB Tech Evangelist".</li>
-          <li>ETHDenver Hackathon: Judge, video presentations.</li>
-        </ul>
-      </div>
-      <div class="experience-item">
-        <h3>Discreet Labs | Head of Developer Relations</h3>
-        <span class="details">May 2022 - Oct 2022 · 6 mos | San Francisco, California, United States · Hybrid</span>
-        <ul>
-          <li>Developer Relations for the Findora Layer 1 EVM blockchain with Zero-Knowledge proof privacy features.</li>
-          <li>Coordinated global events and hackathons for developer engagement.</li>
-          <li>Developed onboarding guidelines for business developers and Findora DAO signatories.</li>
-          <li>Conducted workshops on ZKP cryptography, validator setup, and Rialto bridging.</li>
-          <li>Performed smart contract testing on the Findora X Smart Chain.</li>
-          <li>Represented the company at hackathons, supporting developers with integration and tooling.</li>
-        </ul>
-        <p>Skills: Zero knowledge proofs, Truffle Framework, Object-Oriented Programming (OOP), Management, Developer Relations, UTXO, Blockchain research, Relationship Development, Event Planning, Solidity, Developer Evangelism, Research</p>
-      </div>
-      <div class="experience-item">
-        <h3>Developer Captain | Harmony</h3>
-        <span class="details">Jun 2021 - May 2022 · 1 yr | Palo Alto, California, United States · Remote</span>
-        <ul>
-          <li>Led live developer workshops using lesson plans I authored: <a href="https://bridge-builders.gitbook.io/untitled/" target="_blank">Lesson Plans</a>.</li>
-          <li>Approved as Developer DAO Governor (Jan 2022) – <a href="https://talk.harmony.one/t/developer-dao-new-governors-approved/8702" target="_blank">Governance</a>. Served as Chaotic Beauty LLC representative; secured $100,000 DAO funding – <a href="https://talk.harmony.one/t/developer-dao-funding-request/9804" target="_blank">Funding Request</a>.</li>
-          <li>Managed DAO operations teams including Harmony Developer DAO and Bridge Builders DAO. Co-founded Alexandria (decentralized education initiative) – <a href="https://talk.harmony.one/t/thread-developer-introductions/1453/30" target="_blank">Forum</a>.</li>
-          <li>Supported developer relations strategy and matched developers with project bounties on GitHub. Onboarded 700+ developers into the Harmony ecosystem.</li>
-        </ul>
-        <p>Skills: Truffle Framework, Object-Oriented Programming (OOP), Smart Contracts, Blockchain research, Relationship Development, Teaching, Solidity, Technical Documentation, Blockchain, Developer Evangelism</p>
-      </div>
-      <div class="experience-item">
-        <h3>Project Engineering | Ethereum Network (Freelance)</h3>
-        <span class="details">Jun 2021 - May 2022 · 1 yr | San Francisco, California, United States · Remote</span>
-        <ul>
-          <li>As the founder of <a href="https://github.com/BridgeBuildersDAO" target="_blank">Bridge Builders DAO</a>, I fostered developer relations, organized networking events and coordinated local hackathons in South SF.</li>
-          <li>Responsible for crafting technical documentation and token-economic charts for projects.</li>
-          <li>Provided Smart Contract consultation for several projects across various platforms, including Harmony Protocol, Polygon, Findora, Skale Labs, Ethereum, and Boba Network.</li>
-        </ul>
-        <p>Skills: Truffle Framework, Object-Oriented Programming (OOP), Blockchain research, Relationship Development, Software Project Management, Teaching, Leadership, Solidity, Developer Evangelist</p>
-      </div>
+      <h2>Focus Areas &amp; Tooling</h2>
+      <p><strong>Compute/Security:</strong> Intel SGX/TDX (Fortanix, dstack/TEE), Phala Cloud remote attestation, enclave TLS, MPC, threshold signing.</p>
+      <p><strong>ZK/Cryptography:</strong> ZK authentication patterns, commitments/XOR-proofs, witness encryption concepts (high-level), BFT protocol design, zero-trust verification.</p>
+      <p><strong>Languages/Frameworks:</strong> Python (8+ years: PyTorch, Matplotlib, NumPy, SymPy, cryptography, gmpy), Rust (Tokio, Actix, wagyu, serde), Solidity, Go, Node.js/TypeScript/JavaScript.</p>
+      <p><strong>Systems Methods:</strong> TLA+/PlusCal, ORM/concurrency/distributed service design, API and microservice architecture | Docker/GitHub Actions/Terraform | Postgres/Redis.</p>
+      <p><strong>Automation Tooling:</strong> LaTeX, Codex, Warp OZ agents with <a href="https://github.com/DylanCkawalec/warp-engine" target="_blank" rel="noopener noreferrer">Warp Engine</a>, Cursor IDE, n8n workflows with <a href="https://github.com/DylanCkawalec/opgrok" target="_blank" rel="noopener noreferrer">opgrok</a>, CoreThink API, Sonnet 4.5.</p>
     </section>
 
-    <!-- Notable Projects -->
     <section>
-      <h2><span class="icon">&#x1F4BB;</span> Notable Projects</h2>
-      
-      <div class="experience-item">
-        <h3>Rosario-Wang Proof</h3>
-        <p>
-          Contributed to a cryptographic framework using lattice structures and holographic projections for post-quantum authentication, with applications in blockchain and identity verification.
-        </p>
-        <p><strong class="tech-used">Technologies Used:</strong> Lattice-Based Cryptography, Post-Quantum Methods, Rust, C, Python.</p>
-      </div>
-
-      <div class="experience-item">
-        <h3>Defe Library (Decentralized Front Ends)</h3>
-        <p>
-          Developed Rust tools to decentralize domain ownership via blockchain registries (Optimism, Osmosis, Ethereum L1), using TEEs for integrity and censorship resistance.
-        </p>
-        <p><strong class="tech-used">Technologies Used:</strong> Rust, Trusted Execution Environments (TEE - Fortanix SGX/TDX), Confidential Certbot, IPFS, Blockchain (Optimism, Osmosis, Ethereum L1), Multi-Signature Wallets, DNS Management.</p>
-      </div>
-
-      <div class="experience-item">
-        <h3>Invo SDK – Rocky Road API (v3.3.6)</h3>
-        <p>
-          Built the backend for a decentralized exchange SDK enabling in-game currency interoperability, with key management and parachain communication.
-        </p>
-        <p><strong class="tech-used">Technologies Used:</strong> Rust, Actix Web, Redis, Substrate (subxt library), Cryptography (AEAD, AES, RSA, BIP39, HKDF), Parachain Integration.</p>
-      </div>
-      
-      <div class="experience-item">
-        <h3>B3zrk (Off-Chain Exchange v0.4.0)</h3>
-        <p>
-          Built an off-chain cryptocurrency exchange in Rust using Blake3 hashing, integrated with the POEMS protocol for verifiable on-chain settlement via Aleo.
-        </p>
-        <p><strong class="tech-used">Technologies Used:</strong> Rust, Blake3 Hashing, POEMS Protocol (ZK-TEE), Aleo Cryptographic Frameworks, Off-Chain Systems.</p>
-      </div>
-
-      <div class="experience-item">
-        <h3>POEMS Protocol (ZK-DEX for Signatures)</h3>
-        <p>
-          Designed and implemented the Proof of Encrypted Multisig System (POEMS) — a ZK framework for function signature verification, enabling verifiable off-chain DEX transactions settled on-chain. Awarded a $50,000 grant from the Aleo Foundation (<a href="https://www.linkedin.com/posts/joanna-zeng-4a85bb5_on-the-floor-with-jordi-and-ming-from-polygon-activity-7171955161475584000-IK6F" target="_blank">proof</a>).
-        </p>
-        <p><strong class="tech-used">Technologies Used:</strong> Zero-Knowledge Proofs (ZKP), Trusted Execution Environments (TEE), Cryptography, Aleo Blockchain.</p>
-      </div>
-
-      <div class="experience-item">
-        <h3>Invo AI (Blockchain Data Analyst v2.0.0)</h3>
-        <p>
-          Built a blockchain relayer in Rust integrating external AI APIs for data analysis on the Invo chain.
-        </p>
-        <p><strong class="tech-used">Technologies Used:</strong> Rust, Actix Web, Reqwest (API Integration), Serde (Serialization), AI/ML API Integration, Blockchain Relayers.</p>
-      </div>
-
-      <div class="experience-item">
-        <h3>Invo Wallet Interface (v1.0.0)</h3>
-        <p>
-          Built a Rust wallet interface with cryptographic key management (HMAC, HKDF, BIP39, elliptic curve) for the Substrate-based Invo blockchain.
-        </p>
-        <p><strong class="tech-used">Technologies Used:</strong> Rust, Cryptography (HMAC, HKDF, Elliptic Curve, BIP39), Tiny-Keccak (Hashing), Substrate (sp-core library).</p>
-      </div>
-
-      <div class="experience-item">
-        <h3>AIMBC / Yor Bridge – Trustless Atomic Bridge Protocol</h3>
-        <p>
-          Designed and implemented a trustless bridge using Aleo as the ZK intermediary layer between EVM chains (Ethereum, BSC). Architecture: Owned Account Proofs (OAPs)—non-transferable attestation NFTs linking signer identity across chains; MP-HTLC (multiparty hash time-locked contracts) for atomic swap execution; dual-chain key derivation (Aleo + EVM private keys → Bridge Key) for custody-free operation. Users act as their own bridge operator; no delegated liquidity pools. AIMBC contract standard for collateral verification and commitment phases.
-        </p>
-        <p><strong class="tech-used">Technologies Used:</strong> Solidity, Aleo (ZK Layer 1), EVM (Ethereum, BSC), MP-HTLC, Rust (ethers-rs), SHA256/Kecak256, AES-GCM.</p>
-      </div>
+      <h2>Selected Builds (Shipped / Demonstrated)</h2>
+      <ul>
+        <li><strong>Confidential terminal agents:</strong> <a href="https://github.com/DylanCkawalec/DI" target="_blank" rel="noopener noreferrer">DI</a> (Solidity ERC-8004 interface) and <a href="https://github.com/DylanCkawalec/warp-engine" target="_blank" rel="noopener noreferrer">Warp Engine</a> for attested TDX private-agent execution.</li>
+        <li><strong>Decentralized front-end infrastructure:</strong> <a href="https://github.com/osmosis-labs/defe" target="_blank" rel="noopener noreferrer">defe</a> Rust CLI for SGX/Fortanix provisioning, enclave TLS, and threshold signing to reduce operator trust risk.</li>
+        <li><strong>Protected password entry:</strong> <a href="https://eni6ma.gitbook.io/eni6ma/" target="_blank" rel="noopener noreferrer">ENI6MA demo</a> spanning web, CLI, and on-chain verification flows under confidential research constraints.</li>
+        <li><strong>Zero-trust verifier network:</strong> <a href="https://github.com/DylanCkawalec/cosmic-hack/blob/main/README.md" target="_blank" rel="noopener noreferrer">cosmic-hack</a> prototype for TEE-only execution and ZK-style boundary verification.</li>
+        <li><strong>Learned compression R&amp;D:</strong> Evoformer-inspired plus zstd pipeline for deterministic, verifiable transforms over structured and unstructured binary data.</li>
+      </ul>
     </section>
 
-    <!-- Technical Skills -->
     <section>
-      <h2><span class="icon">&#x2699;</span> Technical Skills</h2>
-      <div class="skills-container">
-        <div class="skills-column">
-          <div class="skill-item skill-crypto">
-            <div class="skill-name"><span class="skill-logo">🐋 </span>Crypto</div>
-            <div class="skill-bar-container">
-              <div class="skill-bar" data-experience="8"><div class="skill-level"></div></div>
-              <div class="skill-years">8 yrs</div>
-            </div>
-          </div>
-          <div class="skill-item skill-zkp">
-            <div class="skill-name"><span class="skill-logo">💜 </span>ZKP</div>
-            <div class="skill-bar-container">
-              <div class="skill-bar" data-experience="6"><div class="skill-level"></div></div>
-              <div class="skill-years">6 yrs</div>
-            </div>
-          </div>
-          <div class="skill-item skill-rust">
-            <div class="skill-name"><span class="skill-logo">🦀 </span>Rust</div>
-            <div class="skill-bar-container">
-              <div class="skill-bar" data-experience="5"><div class="skill-level"></div></div>
-              <div class="skill-years">5 yrs</div>
-            </div>
-          </div>
-          <div class="skill-item skill-python">
-            <div class="skill-name"><span class="skill-logo">🐍 </span>Python</div>
-            <div class="skill-bar-container">
-              <div class="skill-bar" data-experience="5"><div class="skill-level"></div></div>
-              <div class="skill-years">5 yrs</div>
-            </div>
-          </div>
-          <div class="skill-item skill-solidity">
-            <div class="skill-name"><span class="skill-logo"> ♦</span>Solidity</div>
-            <div class="skill-bar-container">
-              <div class="skill-bar" data-experience="5"><div class="skill-level"></div></div>
-              <div class="skill-years">5 yrs</div>
-            </div>
-          </div>
-          <div class="skill-item skill-azure">
-            <div class="skill-name"><span class="skill-logo">☁️ </span>Azure</div>
-            <div class="skill-bar-container">
-              <div class="skill-bar" data-experience="4"><div class="skill-level"></div></div>
-              <div class="skill-years">4 yrs</div>
-            </div>
-          </div>
-          <div class="skill-item skill-tee">
-            <div class="skill-name"><span class="skill-logo">🐔 </span>TEE</div>
-            <div class="skill-bar-container">
-              <div class="skill-bar" data-experience="3"><div class="skill-level"></div></div>
-              <div class="skill-years">3 yrs</div>
-            </div>
-          </div>
-          <div class="skill-item skill-aws">
-            <div class="skill-name"><span class="skill-logo">☁️ </span>AWS</div>
-            <div class="skill-bar-container">
-              <div class="skill-bar" data-experience="2"><div class="skill-level"></div></div>
-              <div class="skill-years">2 yrs</div>
-            </div>
-          </div>
-          <div class="skill-item skill-cpp">
-            <div class="skill-name"><span class="skill-logo">➕ </span>C++</div>
-            <div class="skill-bar-container">
-              <div class="skill-bar" data-experience="2"><div class="skill-level"></div></div>
-              <div class="skill-years">2 yrs</div>
-            </div>
-          </div>
-          <div class="skill-item skill-js">
-            <div class="skill-name"><span class="skill-logo">🟨 </span>JavaScript</div>
-            <div class="skill-bar-container">
-              <div class="skill-bar" data-experience="2"><div class="skill-level"></div></div>
-              <div class="skill-years">2 yrs</div>
-            </div>
-          </div>
+      <h2>Professional Experience</h2>
+
+      <article class="role">
+        <div class="role-head">
+          <h3>Head of Developer Relations &amp; Solutions Architect <span>Phala Network</span></h3>
+          <p>May 2025 – Dec 2025 (FT)</p>
         </div>
-        <div class="skills-column">
-          <ul class="skills-list">
-            <li><strong>Blockchain Platforms & Concepts:</strong> EVM (Ethereum, BNB Chain, Findora), Substrate/Polkadot, Cosmos SDK (Osmosis), Bitcoin Layer 2, Zero-Knowledge Rollups (zkBNB, Aleo), Oracles, Interoperability Bridges, DAOs</li>
-            <li><strong>Cryptography:</strong> Trusted Execution Environments (TEE - SGX/TDX), Zero-Knowledge Proofs (ZKP), Multi-Party Computation (MPC), Lattice-based Cryptography,  Cryptographic Hashing, Digital Signatures</li>
-            <li><strong>Web Development:</strong> JavaScript, TypeScript, React, NextJS, RemixJS, HTML, CSS, Tailwind CSS, Actix Web (Rust), Node.js</li>
-            <li><strong>Databases:</strong> PostgreSQL, Redis, Supabase</li>
-            <li><strong>Developer Relations & Strategy:</strong> Technical Documentation, Workshops & Presentations, Community Building, Hackathon Coordination, Strategic Partnerships, Technical Marketing Management, Complex Solution Architecture, MVP staging</li>
-            <li><strong>Formal Methods:</strong> TLA+ for formal specification and system verification</li>
-            <li><strong>Tools:</strong> Git, GitHub (CoPilot), Docker, Overleaf, Lucid Charts, AI (OpenAI Codex) , Riverside AI, FinalCut Pro</li>
-          </ul>
+        <p class="subline">Confidential compute (TEE) platform: Phala Cloud / dstack workflows</p>
+        <ul>
+          <li>Wrote Phala Cloud dstack/TEE documentation and reference flows that moved partner teams from evaluation to production confidential-compute deployment.</li>
+          <li>Led confidential AI rollout by deploying private agents inside Intel TDX via dstack with attestation-backed execution guarantees.</li>
+          <li>Implemented <a href="https://github.com/DylanCkawalec/DI" target="_blank" rel="noopener noreferrer">DI</a> Solidity ERC-8004 contracts and built <a href="https://github.com/DylanCkawalec/warp-engine" target="_blank" rel="noopener noreferrer">Warp Engine</a> for private terminal-agent orchestration.</li>
+          <li>Presented dstack/TEE workflows at the Confidential Computing Consortium and onboarded partners, supporting Linux Foundation acceptance through a 17/17 vote.</li>
+          <li>Grew dstack repository visibility from 34 to 400+ GitHub stars in six months through docs, demos, and integration support.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <div class="role-head">
+          <h3>Founding Engineer / Principal Architect (Independent Researcher in Cybernetics) <span>ENI6MA Cybernetics | Cosmic Inc. | ENI6MA LLC</span></h3>
+          <p>Summer 2024 – Jan 2026</p>
         </div>
-      </div>
-    </section>
-
-    <!-- Education & Certifications -->
-    <section>
-      <h2><span class="icon">&#x1F393;</span> Education & Certifications</h2>
-      
-      <!-- Education -->
-      <div class="education-item">
-        <p><strong>Western Governors University</strong></p>
-        <p>Bachelor of Science (BS), Computer Science</p>
-        <p>Aug 2020 – Aug 2021</p>
+        <p class="subline">Confidential R&amp;D: zero-trust verification, ZK authentication, deterministic AI safeguards (high-level public synopsis)</p>
         <ul>
-          <li>Curriculum included: Python, C++, Java, JavaScript, Database Management, Web Development, IT Security.</li> 
+          <li>Designed zero-trust authentication architecture for human and AI access, combining TEE-only execution, remote attestation, and ZK verification boundaries.</li>
+          <li>Authored and handed over a provisional patent package, private codebase, demonstrations, and confidential research materials at the end of the engagement.</li>
+          <li>Wrote 24+ private research papers that formalized systems and methods for zero-trust authentication and verification under confidentiality constraints.</li>
+          <li>Built passwordless verifier prototypes and supported a <strong>$168K</strong> friends-and-family raise through technical narrative, architecture reviews, and demos.</li>
         </ul>
-      </div>
-      <div class="education-item">
-        <p><strong>MiraCosta College</strong></p>
-        <p>Associate of Arts and Sciences (AAS), Computer Programming</p>
-        <p>2019 – 2020</p>
-         <ul>
-          <li>Focus on Web, Mobile, and Desktop Application Development (Java, Python, HTML, CSS, JavaScript).</li>
-        </ul>
-      </div>
-      <div class="education-item">
-        <p><strong>MiraCosta College</strong></p>
-        <p>Associate of Arts (AA), Drama and Theatre Arts</p>
-        <p>2017 – 2018</p>
-      </div>
+      </article>
 
-      <!-- Certifications -->
-       <h3 style="margin-top: 2rem; font-size: 1.2rem; color: #79c0ff;">Certifications</h3> 
-      <div class="education-item" style="margin-bottom: 0.5rem;"> 
-        <p>Blockchain Development | Simplilearn | Sep 2021</p>
-        <p style="font-size: 0.9rem; color: #8b949e; margin-bottom: 0.5rem;"><em>Solidity, Hyperledger Fabric & Composer, Blockchain asset management, VM encryption algorithms</em></p>
-      </div>
-       <div class="education-item" style="margin-bottom: 0.5rem;">
-        <p>Cyber/Computer Forensics and Counterterrorism | Simplilearn | Sep 2021</p>
-         <p style="font-size: 0.9rem; color: #8b949e; margin-bottom: 0.5rem;"><em>Risk management, malware awareness, encryption standards, pen testing, forensics</em></p>
-      </div>
-      <div class="education-item" style="margin-bottom: 0.5rem;">
-        <p>Computer Information Sciences and Support Services | Simplilearn | Sep 2021</p>
-         <p style="font-size: 0.9rem; color: #8b949e; margin-bottom: 0.5rem;"><em>Linux CLI, Ubuntu administration, file management</em></p>
-      </div>
-      <div class="education-item" style="margin-bottom: 0.5rem;">
-        <p>GoLang Programming Fundamentals | Udemy | Sep 2021</p>
-      </div>
-       <div class="education-item" style="margin-bottom: 0.5rem;">
-        <p>Go Programming (Concurrency & Projects) | Udemy | Nov 2021</p>
-      </div>
-    </section>
-
-    <!-- Awards and Achievements -->
-    <section>
-      <h2><span class="icon">&#x1F3C6;</span> Awards and Achievements</h2>
-      <ul>
-        <li>Winner, Hacker Deathmatch AOS Arweave Hackathon 2024 at ETHDenver (Solo) – <a href="https://x.com/aoTheComputer/status/1764094933428732127" target="_blank">Details</a></li>
-        <li>Winner, ETH Global San Francisco 2024 – "Zend It": Best zk App on Polygon (1st), Best use of Ledger Technology (1st). Secure transaction verification with ZKPs, EIP-712, and Ledger clear signing – <a href="https://ethglobal.com/showcase/zend-it-0f93v" target="_blank">Proof</a> · <a href="https://eth-global-sf-2024-gamma.vercel.app/" target="_blank">Demo</a> · <a href="https://github.com/ABusyHippie/ETHGlobalSF2024" target="_blank">GitHub</a></li>
-        <li>2nd Place, VeChain x EasyA Hackathon 2024 for "PowerUp" – <a href="https://www.linkedin.com/posts/easya_if-youve-been-following-on-twitter-youll-activity-7214575742167195648-wyEf" target="_blank">Proof</a></li>
-        <li>Winner, Aleo Best Tech Award 2023 – <a href="https://github.com/Invo-Technologies/poems" target="_blank">'POEMS protocol'</a></li>
-        <li>Winner, ETHAmsterdam 2022 Hackathon with team – <a href="https://ethglobal.com/showcase/degenbox-zh7pp" target="_blank">'DegenBox'</a></li>
-        <li>Best Partner Award, Kennedy Center American College Theater Festival (KCACTF), 2018 – <a href="https://www.imdb.com/name/nm8188217/" target="_blank">IMDB</a></li>
-      </ul>
-    </section>
-
-    <!-- Community Involvement -->
-    <section>
-      <h2><span class="icon">&#x1F465;</span> Community Involvement</h2>
-      <ul>
-        <li>Founder, <a href="https://github.com/BridgeBuildersDAO" target="_blank">Bridge Builders DAO</a> – Organizing local hackathons and fostering developer collaboration in South San Francisco.</li>
-        <li>Created POEMS infrastructure proposal for Binance Smart Chain – <a href="https://github.com/DylanCkawalec/BEPs/blob/BEP-Poems/BEP218.md" target="_blank">BEP218: Proof of the Effective Majority Staked</a></li>
-      </ul>
-    </section>
-
-    <!-- In a Past Life -->
-    <section>
-      <h2><span class="icon">🕰️</span> In a Past Life</h2>
-      <div class="experience-item">
-        <h3>Python Instructor | Delaware STEAM Academy (via Outschool.org)</h3>
-        <span class="details">Apr 2021 - May 2022 · Part-time · San Francisco Bay Area</span>
-        <p>Led Python and C++ lessons for international students (ages 8-18) preparing for MIT's AI program through a STEM nonprofit.</p>
-      </div>
-      <div class="experience-item">
-        <h3>Optics Technician II (IBF) | ZYGO Corporation</h3>
-        <span class="details">Nov 2021 - May 2022 · 7 mos | California, United States · Full-time</span>
+      <article class="role">
+        <div class="role-head">
+          <h3>Research &amp; Development Engineer <span>Osmosis Foundation</span></h3>
+          <p>Apr 2024 – Sep 2024 (Contract)</p>
+        </div>
+        <p class="subline">Cosmos infra R&amp;D: decentralized front ends, enclave deployments, signing/neutrality</p>
         <ul>
-          <li>Manually analyzed data and managed input to properly configure Ion beams in a vacuum chamber to polish the surface of extremely sensitive optics (Ligo, Tempest, Calcium glass).</li>
-          <li>Handled, cleaned, and polished high-precision optics for lithography, chip manufacturing, drones, or other tools.</li>
-          <li>Performed Ion Beam Gun maintenance, including assembly/disassembly of ION guns and neutralizers, and inspections to prevent failures.</li>
-          <li>Utilized Python & Visual Basic, M7 & Metrology tools in a clean room environment.</li>
+          <li>Delivered <a href="https://github.com/osmosis-labs/defe" target="_blank" rel="noopener noreferrer">defe</a> as a Rust CLI with Fortanix SGX workflows for secure, repeatable decentralized front-end provisioning.</li>
+          <li>Implemented enclave TLS key issuance and threshold-signing partitioning to reduce single-operator trust assumptions in Osmosis front-end operations.</li>
+          <li>Authored SGX deployment guidance for edge operations, giving Cosmos teams a direct path from prototype setups to production-style environments.</li>
         </ul>
-        <p>Skills: Focused Ion Beam (FIB), Optics Handling, Clean Room Maintenance, Self-management, Technician</p>
-      </div>
-       <div class="experience-item">
-        <h3>Robotics Technician III | Intuitive</h3>
-        <span class="details">Jun 2021 - Dec 2021 · Contract · Sunnyvale, CA</span>
-        <p>Responsible for meticulous inspection and assembly of intricate components for surgical robotic systems; achieved perfect score on technical dexterity/precision test.</p>
-      </div>
-       <div class="experience-item">
-        <h3>Model 3 Technician III | Tesla</h3>
-        <span class="details">Dec 2020 - May 2021 · Contract · Fremont, CA</span>
-        <p>Served as Automation Tester and General Assembly specialist, ensuring top-quality seat production and identifying errors in a high-speed environment.</p>
-      </div>
-      <div class="experience-item">
-        <h3>Film & Theatre Actor | Engage Artists Agency</h3>
-        <span class="details">Jan 2014 - May 2018 · Contract · Los Angeles, CA</span>
-        <p>Professional actor (SAG-AFTRA Eligible, <a href="https://www.imdb.com/name/nm8188217/" target="_blank">IMDB</a>) with experience in film, theatre, and voice acting. Recipient of KCACTF Best Partner Award (2018).</p>
-      </div>
-       <div class="experience-item">
-        <h3>Human Resources Manager, Sales | Kirby Company (Paradigm Group)</h3>
-        <span class="details">Nov 2016 - Mar 2018 · Full-time · San Diego, CA</span>
-        <p>Progressed from Dealer to HR Administrator. Excelled in direct sales (achieving "K-Pin" award for >$50k monthly revenue) and developed dealer training programs.</p>
-      </div>
+      </article>
+
+      <article class="role">
+        <div class="role-head">
+          <h3>Head of Developer Relations <span>GOAT Network (BTC L2)</span></h3>
+          <p>Jul 2024 – Jan 2025 (Contract)</p>
+        </div>
+        <p class="subline">BTC L2 enablement: docs, integrations, workshops</p>
+        <ul>
+          <li>Authored <a href="https://docs.goat.network/" target="_blank" rel="noopener noreferrer">GOAT Network technical documentation</a> for zkMIPS, sequencer APIs, and EVM/Solidity integration paths for BTC L2 teams.</li>
+          <li>Delivered the <a href="https://fargoat.vercel.app/founder/contracts/request-for-proposal" target="_blank" rel="noopener noreferrer">Founders Club MVP</a> and onboarded 100+ founders through structured deployment workflows.</li>
+          <li>Built and managed <strong>40+ ecosystem partnerships</strong>, including major infrastructure providers listed in the <a href="https://www.goat.network/ecosystem" target="_blank" rel="noopener noreferrer">GOAT ecosystem directory</a>.</li>
+          <li>Led BTC L2 workshops at BTC Nashville and Staking Summit Singapore, then translated workshop feedback into integration runbooks.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <div class="role-head">
+          <h3>Head of Developer Relations <span>Findora / Discreet Labs (now Fractal Network)</span></h3>
+          <p>May 2022 – Oct 2022 (Contract)</p>
+        </div>
+        <p class="subline">Confidential EVM + ecosystem growth</p>
+        <ul>
+          <li>Led DevRel for Findora's confidential EVM stack, delivering validator, bridging, and privacy workflow education for global ecosystem teams.</li>
+          <li>Onboarded <strong>80+ validators</strong> into Findora node operations through direct setup support, strengthening network participation during Series A visibility.</li>
+          <li>Supported ETHAmsterdam launch narrative during a <strong>$12M+</strong> token raise window, alongside Yellow Submarine and FairySwap ecosystem rollouts.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <div class="role-head">
+          <h3>CTO &amp; Principal Engineer <span>Invo Technologies</span></h3>
+          <p>Apr 2023 – Jan 2025 (Contract)</p>
+        </div>
+        <p class="subline">Substrate + privacy rail R&amp;D; developer monetization tooling</p>
+        <ul>
+          <li>Built the <a href="https://ourinvo.com/" target="_blank" rel="noopener noreferrer">Invo platform</a> for game-economy monetization and analytics, giving studios tooling for revenue and player-economy visibility.</li>
+          <li>Designed a privacy-preserving exchange concept for gaming economies using Substrate architecture, Aleo privacy rails, and EVM interoperability requirements.</li>
+          <li>Designed <strong>AIMBC / Yor Bridge</strong> and implemented Solidity contract interfaces for MP-HTLC settlement with OAP attestations and Aleo-mediated verification.</li>
+          <li>Led <a href="https://github.com/Invo-Technologies/poems" target="_blank" rel="noopener noreferrer">POEMS (ZK--TEE research)</a> implementation, which won Aleo Best Tech 2023 and supported a <strong>$50K</strong> Aleo Foundation grant.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <div class="role-head">
+          <h3>Independent Research Studio (contracts) <span>Chaotic Beauty LLC</span></h3>
+          <p>Nov 2020 – Jan 2026</p>
+        </div>
+        <p class="subline">C-Corp for R&amp;D, solutions architecture, DevRel contracts</p>
+        <ul>
+          <li>Ran a contract studio for 6+ month engagements across blockchain teams, covering security architecture, integrations, and developer platform enablement.</li>
+          <li>Delivered MPC/threshold-signing custody patterns and key-management hardening to reduce operational key exposure in production digital-asset systems.</li>
+        </ul>
+      </article>
+
+      <p class="earlier"><strong>Earlier:</strong> Tesla (Model 3 Technician; top internal Da Vinci dexterity score) • Zygo (IBF Technician; ion-beam figuring lasers for precision optics on teams connected to James Webb telescope programs) • BNB Chain Labs (US Tech Evangelist) • Harmony (Developer Captain / DAO Governor; $100K DAO funding; 700+ dev onboarding) • Bridge Builders DAO (Ethereum ecosystem consulting).</p>
     </section>
 
-    <!-- Publications and Presentations -->
     <section>
-      <h2><span class="icon">&#x1F3A4;</span> Publications and Presentations</h2>
-      
-      <h3 class="subsection-title">Articles & Documentation</h3>
+      <h2>Recognition, Credentials &amp; Publications</h2>
+      <h3>Selected Awards</h3>
       <ul>
-        <!-- Keep Articles/Docs Here -->
-        <li>"Churn Monetization is the Future of GameFi" (Invo) – <a href="https://medium.com/cryptocurrency-scripts/churn-monetization-is-the-future-of-gamefi-2fac57ff0489" target="_blank">Read Article</a></li>
-        <li>"The Future of GameFi and Gaming: Invo's DLAL and the Digital Economy" – <a href="https://medium.com/cryptocurrency-scripts/the-future-of-gamefi-and-gaming-invos-dlal-and-the-digital-economy-0d6a88c7de3a" target="_blank">Read Article</a></li>
-        <li>"Bridging Blockchain and Gaming with Invo's Default Currency Solution" – <a href="https://invotechnologies.medium.com/bridging-blockchain-and-gaming-with-invos-default-currency-solution-113dedaace96" target="_blank">Read Article</a></li>
-        <li>Eni6ma Cybersecurity - Rosario-Wang Proof Contribution – <a href="https://eni6ma.gitbook.io/eni6ma/the-patent-and-innovation/the-team" target="_blank">View Team Page</a></li>
-        <li>Coin.fi Research Papers Contribution – <a href="https://coin.fi/research" target="_blank">View Research</a></li>
-        <li>GOAT Network Documentation Contribution – <a href="https://docs.goat.network/" target="_blank">View Docs</a></li>
-        <li>"Aleo Developer Enablement Strategy" – Presented for the Aleo Foundation (with Alex Pruden and Anthony DePrizio). <a href="https://github.com/DylanCkawalec/Aleo-Developer-Enablement-Strategy" target="_blank">View Document</a></li>
-        <!-- Removed presentation links if they have video counterparts below -->
+        <li><strong>ETHGlobal SF 2024:</strong> <a href="https://ethglobal.com/showcase/zend-it-0f93v" target="_blank" rel="noopener noreferrer">Zend It</a> — Ledger Tech Award (1st), Polygon Best zkApp (1st).</li>
+        <li><strong>ETHDenver 2024:</strong> AOS <em>Hacker Deathmatch</em>.</li>
+        <li><strong>VeChain × EasyA 2024:</strong> <a href="https://www.linkedin.com/posts/easya_if-youve-been-following-on-twitter-youll-activity-7214575742167195648-wyEf" target="_blank" rel="noopener noreferrer">PowerUp</a> (2nd).</li>
+        <li><strong>Aleo 2023:</strong> POEMS (Best Tech).</li>
+        <li><strong>ETHAmsterdam 2022:</strong> <a href="https://ethglobal.com/showcase/degenbox-zh7pp" target="_blank" rel="noopener noreferrer">DegenBox</a> — EPNS Best Use of Frontend SDK; Boba Network Best Use.</li>
+        <li><strong>KCACTF 2018:</strong> Best Partner (Theatre) — <a href="https://www.imdb.com/name/nm8188217/" target="_blank" rel="noopener noreferrer">IMDB</a>.</li>
       </ul>
 
-      <h3 class="subsection-title">Featured Videos & Talks</h3>
+      <h3>Credentials</h3>
+      <p><strong>RareSkills:</strong> Blockchain Engineering Fellow (May 2023) • <strong>ZKU (Harmony ONE):</strong> Zero Knowledge University Developer (Mar 2022)</p>
+      <p><strong>B.S. Computer Science:</strong> Western Governors University • <strong>A.A.S. Computer Programming:</strong> MiraCosta College</p>
+
+      <h3>Selected Writing, Docs &amp; Research</h3>
       <ul>
-        <!-- GOAT Network -->
-        <li>GOAT Network – <a href="https://www.youtube.com/watch?v=ZNCkR9759tE" target="_blank">Watch Video</a></li>
-        <li>GOAT Network - House of ZK Presentation (ZKM) – <a href="https://www.youtube.com/watch?v=KaVR6dCKbTc" target="_blank">Watch Video</a></li>
-        <li>GOAT Network - Defiant Podcast Appearance – <a href="https://www.youtube.com/watch?v=OhAq5u78KNU" target="_blank">Watch Video</a></li>
-        <li>GOAT Network - Crypto Coin Show Interview – <a href="https://www.youtube.com/watch?v=TJRRuuoBZkA&t=1544s" target="_blank">Watch Video</a></li>
-        <li>GOAT Network - Staking Summit Presentation – <a href="https://www.youtube.com/watch?v=G7xcsoXydTg" target="_blank">Watch Video</a></li>
-        <!-- Osmosis -->
-        <li>Osmosis - DevMos 2024: Building Decentralized Front Ends (Workshop) – <a href="https://www.youtube.com/watch?v=o1TY6sjMOek&t=119s" target="_blank">Watch Video</a></li>
-        <!-- BNB Chain Labs -->
-        <li>BNB Chain Labs - Bread N' Butter Podcast (Host Appearance) – <a href="https://youtu.be/wPqFvNzRZHg?si=c4Atvb58JsczYqTd" target="_blank">Watch Video</a></li>
-        <li>BNB Chain Labs - ETHDenver Infra Day ZK Workshop – <a href="https://youtu.be/Fr7L9kOf8v8?si=Ht7Myl_GUvTwZp7d" target="_blank">Watch Video</a></li>
-        <!-- Invo Technologies -->
-        <li>Invo Technologies - In-Game Currency Transfer Demo – <a href="https://youtu.be/7TH5SejzRWI" target="_blank">Watch Demo</a></li>
-         <!-- Discreet Labs / Findora -->
-        <li>Discreet Labs - How to Bridge to Findora & Swap on FairySwap (Tutorial) – <a href="https://www.youtube.com/watch?v=nHJ2imc8Fy4" target="_blank">View Tutorial</a></li>
-        <!-- General Talks -->
-         <li>Building Scalable and Secure Decentralized zkTEE Applications with Rust (ZKM 'House of ZK' 2024) – <a href="https://www.zkm.io/events/hacker-house" target="_blank">Event Link</a> <!-- Note: Direct video link wasn't provided for this one --></li>
-        <!-- Acting -->
-        <li>Acting - Hot Schedules Commercial – <a href="https://youtu.be/UM_7iR2gXw0?si=0-mIa9mqNUV5rE6C" target="_blank">View Video</a></li>
+        <li><a href="https://phalanetwork.mintlify.app/docs" target="_blank" rel="noopener noreferrer">Phala Cloud / dstack Documentation Suite</a></li>
+        <li><a href="https://docs.goat.network/" target="_blank" rel="noopener noreferrer">GOAT Network Protocol Documentation</a></li>
+        <li><a href="https://coin.fi/research" target="_blank" rel="noopener noreferrer">CoinFi Research Archive</a></li>
+        <li><a href="https://eni6ma.gitbook.io/eni6ma/" target="_blank" rel="noopener noreferrer">ENI6MA Research Documentation (public excerpts)</a></li>
+        <li><a href="https://github.com/DylanCkawalec/Aleo-Developer-Enablement-Strategy" target="_blank" rel="noopener noreferrer">Aleo Developer Enablement Strategy</a></li>
+        <li><a href="https://medium.com/cryptocurrency-scripts/churn-monetization-is-the-future-of-gamefi-2fac57ff0489" target="_blank" rel="noopener noreferrer">Churn Monetization is the Future of GameFi</a></li>
+        <li><a href="https://medium.com/cryptocurrency-scripts/the-future-of-gamefi-and-gaming-invos-dlal-and-the-digital-economy-0d6a88c7de3a" target="_blank" rel="noopener noreferrer">The Future of GameFi and Gaming: Invo's DLAL and the Digital Economy</a></li>
+        <li><a href="https://invotechnologies.medium.com/bridging-blockchain-and-gaming-with-invos-default-currency-solution-113dedaace96" target="_blank" rel="noopener noreferrer">Bridging Blockchain and Gaming with Invo's Default Currency Solution</a></li>
       </ul>
+
+      <h3>Selected Talks, Podcast Hosting &amp; Public Proofs</h3>
+      <ul>
+        <li><a href="https://blackboxpodcast.com/" target="_blank" rel="noopener noreferrer">Host, The Blackbox Podcast</a> — Sponsored by Phala Network; independent guest interviews and deep dives across privacy, AI, and blockchain.</li>
+        <li><a href="https://www.youtube.com/watch?v=o1TY6sjMOek&amp;t=119s" target="_blank" rel="noopener noreferrer">DevMos 2024: Decentralized Front Ends Workshop</a></li>
+        <li><a href="https://www.youtube.com/watch?v=G7xcsoXydTg" target="_blank" rel="noopener noreferrer">Staking Summit: GOAT Network BTC L2 Workshop</a></li>
+        <li><a href="https://youtu.be/wPqFvNzRZHg?si=c4Atvb58sczYqTd" target="_blank" rel="noopener noreferrer">Bread N' Butter Podcast (BNB Chain Labs)</a></li>
+        <li><a href="https://www.youtube.com/watch?v=qmSTNj12Rbc" target="_blank" rel="noopener noreferrer">Cosmic Public Proof (YouTube)</a> — published a carrier-audio proof flow with permalinked verification context in the video description.</li>
+      </ul>
+
+      <p class="note">Note: ENI6MA/Cosmic research is summarized at a high level under confidentiality agreements; Dylan Rosario is the only named research collaborator.</p>
     </section>
-
-    <footer>
-      <p>References available upon request</p>
-    </footer>
-  </div>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const skillBars = document.querySelectorAll(".skill-bar");
-      const maxYears = 8; // Maximum years of experience - UPDATED
-  
-      skillBars.forEach((skillBar) => {
-        const experience = skillBar.getAttribute("data-experience");
-        const skillLevel = skillBar.querySelector(".skill-level");
-        const barWidth = (experience / maxYears) * 100;
-        console.log(`Experience: ${experience}, Bar Width: ${barWidth}%`);
-        skillLevel.style.width = `${barWidth}%`;
-      });
-    });
-  </script>
-
+  </main>
 </body>
 </html>
