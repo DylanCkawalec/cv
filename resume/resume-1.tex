@@ -21,18 +21,24 @@
 \usepackage{fancyhdr}
 \usepackage[absolute,overlay]{textpos} % <-- Added for absolute positioning
 
-% ---------- Fonts (XeLaTeX: Times-like, TeX Gyre Termes with fallbacks) ----------
-\usepackage{fontspec}
-\defaultfontfeatures{Ligatures=TeX}
-\IfFontExistsTF{TeX Gyre Termes}{%
-  \setmainfont{TeX Gyre Termes}%
-}{%
-  \IfFontExistsTF{Times New Roman}{%
-    \setmainfont{Times New Roman}%
+% ---------- Fonts ----------
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\else
+  \usepackage{fontspec}
+  \defaultfontfeatures{Ligatures=TeX}
+  \IfFontExistsTF{TeX Gyre Termes}{%
+    \setmainfont{TeX Gyre Termes}%
   }{%
-    \setmainfont{Latin Modern Roman}%
-  }%
-}
+    \IfFontExistsTF{Times New Roman}{%
+      \setmainfont{Times New Roman}%
+    }{%
+      \setmainfont{Latin Modern Roman}%
+    }%
+  }
+\fi
 
 % ---------- Colors ----------
 \definecolor{TitleBlue}{HTML}{79C0FF}
@@ -89,14 +95,13 @@
 \begin{minipage}[t]{\linewidth}
   % Name and Title
   {\Huge \resumeoldtextbf{Dylan Kawalec}}\par\vspace{1pt}
-  {\large \textcolor{HighlightGray}{\textbf{Founding Engineer} \textbar{} \textbf{Principal Architect}}}\par
+  {\large \textcolor{HighlightGray}{\textbf{Head of Developer Relations} \textbar{} \textbf{Founding Engineer \& Solutions Architect} \textbar{} \textbf{Privacy-Preserving AI \& Blockchain}}}\par
   % Expertise Row
   \vspace{3pt}
   {\small
     \textcolor{HighlightGray}{
-      \textbf{Confidential Compute \& Privacy} (TEE / SGX / TDX, ZK) \\
-      Confidential AI Infrastructure \textbullet{} TDX Agent Runtime \textbullet{} Remote Attestation \textbullet{} ZK Authentication \\
-      Deep Tech DevRel Lead \textbullet{} Developer Platform Enablement
+      \textbf{Confidential Compute \& Privacy:} SGX/TDX TEEs, zero-knowledge proofs, remote attestation, and threshold signing. \\
+      \textbf{Experienced Research Engineer} \textbullet{} Developer Platform SDK Architect \textbullet{} Confidential AI infrastructure, LLM agent systems, and technical developer education.
     }
   }\par
   % Education
@@ -122,22 +127,22 @@
 
 
 %=============================================================================
-% Summary (short + direct)
+% Summary
 %=============================================================================
-\section*{Professional Summary}
+\section*{Summary}
 \textbf{I build and ship confidential systems:} TEE-backed services (SGX/TDX), zero-knowledge authentication, and privacy-first blockchain infrastructure.\par
 \textbf{Current build focus:} confidential AI runtimes on TDX/SGX with remote attestation, zero-trust verification boundaries, and verifiable execution.\par
 \textbf{Execution model:} founding-engineer architecture with hands-on delivery across APIs, distributed services, Solidity smart contracts, and formal specifications.\par
-\textbf{Deep Tech DevRel function:} documentation, reference implementations, and partner onboarding that convert architecture into shipped integrations.
+\textbf{Deep Tech Developer Relations function:} documentation, reference implementations, and partner onboarding that convert architecture into shipped integrations.
 
 %=============================================================================
 % Focus Areas / Tooling
 %=============================================================================
 \section*{Focus Areas \& Tooling}
 \textbf{Compute/Security:} Intel SGX/TDX (Fortanix, dstack/TEE), Phala Cloud remote attestation, enclave TLS, MPC, threshold signing.\par
-\textbf{ZK/Cryptography:} ZK authentication patterns, commitments/XOR-proofs, witness encryption concepts (high-level), BFT protocol design, zero-trust verification.\par
+\textbf{ZK/Cryptography:} zero-knowledge authentication, commitments and Schnorr-style proofs, threshold signing, protocol and threat-model design.\par
 \textbf{Languages/Frameworks:} Python (8+ years: PyTorch, Matplotlib, NumPy, SymPy, cryptography, gmpy), Rust (Tokio, Actix, wagyu, serde), Solidity, Go, Node.js/TypeScript/JavaScript.\par
-\textbf{Systems Methods:} TLA+/PlusCal, ORM/concurrency/distributed service design, API and microservice architecture \textbar{} Docker/GitHub Actions/Terraform \textbar{} Postgres/Redis.\par
+\textbf{Systems:} TLA+/PlusCal specs, distributed services, API/microservice architecture, Docker/GitHub Actions/Terraform, Postgres/Redis.\par
 \textbf{Automation Tooling:} LaTeX, Codex, Warp OZ agents with \link{https://github.com/DylanCkawalec/warp-engine}{Warp Engine}, Cursor IDE, n8n workflows with \link{https://github.com/DylanCkawalec/opgrok}{opgrok}, CoreThink API, Sonnet 4.5.
 
 %=============================================================================
@@ -155,38 +160,39 @@
 %=============================================================================
 % Experience
 %=============================================================================
-\section*{Professional Experience}
+\section*{Experience}
 
 \entry{Head of Developer Relations \& Solutions Architect}{Phala Network}{May 2025 -- Dec 2025 (FT)}
 \subline{Confidential compute (TEE) platform: Phala Cloud / dstack workflows}
 \begin{adjustwidth}{0.25in}{0in}
 \begin{itemize}
-  \item Wrote Phala Cloud dstack/TEE documentation and reference flows that moved partner teams from evaluation to production confidential-compute deployment.
-  \item Led confidential AI rollout by deploying private agents inside Intel TDX via dstack with attestation-backed execution guarantees.
-  \item Implemented \link{https://github.com/DylanCkawalec/DI}{DI} Solidity ERC-8004 contracts and built \link{https://github.com/DylanCkawalec/warp-engine}{Warp Engine} for private terminal-agent orchestration.
-  \item Presented dstack/TEE workflows at the Confidential Computing Consortium and onboarded partners, supporting Linux Foundation acceptance through a 17/17 vote.
-  \item Grew dstack repository visibility from 34 to 400+ GitHub stars in six months through docs, demos, and integration support.
+  \item Authored Phala Cloud + dstack documentation and reference deployment flows that moved 12+ partner teams from evaluation to production confidential-compute deployments.
+  \item Led Confidential AI rollout by deploying private agents in \textbf{Intel TDX} via \textbf{dstack}, using remote attestation to provide execution guarantees.
+  \item Implemented \link{https://github.com/DylanCkawalec/DI}{DI} Solidity \textbf{ERC-8004} contracts and built \link{https://github.com/DylanCkawalec/warp-engine}{Warp Engine} for private terminal-agent orchestration; co-authored the \textbf{Trustless Cloud Agents} specification with the Ethereum Foundation.
+  \item Presented dstack/TEE workflows to the Confidential Computing Consortium, onboarded partners, and supported Linux Foundation acceptance (17/17 vote).
+  \item Grew dstack repo visibility from 34 to 400+ GitHub stars in 6 months through docs, demos, integrations, and community programs (community calls and SF Bay Area meetups with Flashbots, tee.fail, Secret Network, and others).
 \end{itemize}
 \end{adjustwidth}
 
-\entry{Founding Engineer / Principal Architect (Independent Researcher in Cybernetics)}{ENI6MA Cybernetics \textbar{} Cosmic Inc. \textbar{} ENI6MA LLC}{Summer 2024 -- Jan 2026}
-\subline{Confidential R\&D: zero-trust verification, ZK authentication, deterministic AI safeguards (high-level public synopsis)}
+\entry{Founding Engineer / Principal Architect (Independent Research)}{Cosmic Inc. \textbar{} ENI6MA LLC}{Summer 2024 -- Jan 2026}
+\subline{Confidential R\&D: zero-trust verification, zero-knowledge authentication, deterministic verification, replay-resistant transcripts (public synopsis)}
 \begin{adjustwidth}{0.25in}{0in}
 \begin{itemize}
-  \item Designed zero-trust authentication architecture for human and AI access, combining TEE-only execution, remote attestation, and ZK verification boundaries.
-  \item Authored and handed over a provisional patent package, private codebase, demonstrations, and confidential research materials at the end of the engagement.
-  \item Wrote 24+ private research papers that formalized systems and methods for zero-trust authentication and verification under confidentiality constraints.
-  \item Built passwordless verifier prototypes and supported a \textbf{\$168K} friends-and-family raise through technical narrative, architecture reviews, and demos.
+  \item Designed a zero-trust access architecture using trusted execution environment-only execution, remote attestation, and a cryptographic proof boundary for human and agent access.
+  \item Built verifier prototypes in \textbf{Python} and \textbf{C++}, implementing commitment-based authentication and challenge-response verification flows with hardened transcripts.
+  \item Wrote formal system specifications and threat models, then translated them into test harnesses and reference implementations for reproducible verification.
+  \item Produced the engagement handoff (provisional patent package, private codebase, demos, and 24+ internal papers) and supported a \textbf{\$168K} friends-and-family raise through architecture reviews and technical demos.
 \end{itemize}
 \end{adjustwidth}
 
 \entry{Research \& Development Engineer}{Osmosis Foundation}{Apr 2024 -- Sep 2024 (Contract)}
-\subline{Cosmos infra R\&D: decentralized front ends, enclave deployments, signing/neutrality}
+\subline{Cosmos infra R\&D: decentralized front-ends, Fortanix SGX enclave deployment, validator signing/neutrality}
 \begin{adjustwidth}{0.25in}{0in}
 \begin{itemize}
-  \item Delivered \link{https://github.com/osmosis-labs/defe}{defe} as a Rust CLI with Fortanix SGX workflows for secure, repeatable decentralized front-end provisioning.
-  \item Implemented enclave TLS key issuance and threshold-signing partitioning to reduce single-operator trust assumptions in Osmosis front-end operations.
-  \item Authored SGX deployment guidance for edge operations, giving Cosmos teams a direct path from prototype setups to production-style environments.
+  \item Built and shipped \link{https://github.com/osmosis-labs/defe}{defe}, a production-grade \textbf{Rust CLI} that automates \textbf{Fortanix SGX} build/sign/enclave workflows for secure, reproducible decentralized front-end provisioning.
+  \item Implemented \textbf{enclave-native ACME/Certbot TLS issuance} and \textbf{key lifecycle automation} (generation, sealing, rotation) to keep private material inside SGX while enabling public HTTPS endpoints.
+  \item Designed \textbf{threshold-signing partitioning} for operational signing paths to reduce single-operator trust and improve neutrality guarantees for Osmosis front-end operations.
+  \item Wrote end-to-end \textbf{SGX deployment and ops documentation} (attestation, secrets handling, edge rollout) to move Cosmos teams from prototype setups to production-style environments.
 \end{itemize}
 \end{adjustwidth}
 
@@ -202,12 +208,12 @@
 \end{adjustwidth}
 
 \entry{Head of Developer Relations}{Findora / Discreet Labs (now Fractal Network)}{May 2022 -- Oct 2022 (Contract)}
-\subline{Confidential EVM + ecosystem growth}
+\subline{Confidential Ethereum Virtual Machine Auditing \& Developer Enablement + Leading ecosystem growth}
 \begin{adjustwidth}{0.25in}{0in}
 \begin{itemize}
-  \item Led DevRel for Findora's confidential EVM stack, delivering validator, bridging, and privacy workflow education for global ecosystem teams.
+  \item Delivering validator, bridging, and privacy workflow education for global ecosystem teams.
   \item Onboarded \textbf{80+ validators} into Findora node operations through direct setup support, strengthening network participation during Series A visibility.
-  \item Supported ETHAmsterdam launch narrative during a \textbf{\$12M+} token raise window, alongside Yellow Submarine and FairySwap ecosystem rollouts.
+  \item Supported ETHAmsterdam launch narrative during a \textbf{\$12M+} token raise window, alongside \link{https://medium.com/findorafoundation/yellow-submarine-a-technical-deep-dive-part-1-34dbb935f996}{Yellow Submarine} and \link{https://ecosystem.findora.org/}{FairySwap ecosystem} rollouts.
 \end{itemize}
 \end{adjustwidth}
 
@@ -215,23 +221,24 @@
 \subline{Substrate + privacy rail R\&D; developer monetization tooling}
 \begin{adjustwidth}{0.25in}{0in}
 \begin{itemize}
-  \item Built the \link{https://ourinvo.com/}{Invo platform} for game-economy monetization and analytics, giving studios tooling for revenue and player-economy visibility.
-  \item Designed a privacy-preserving exchange concept for gaming economies using Substrate architecture, Aleo privacy rails, and EVM interoperability requirements.
-  \item Designed \textbf{AIMBC / Yor Bridge} and implemented Solidity contract interfaces for MP-HTLC settlement with OAP attestations and Aleo-mediated verification.
-  \item Led \link{https://github.com/Invo-Technologies/poems}{POEMS (ZK--TEE research)} implementation, which won Aleo Best Tech 2023 and supported a \textbf{\$50K} Aleo Foundation grant.
+  \item Built the initial \link{https://ourinvo.com/}{Invo platform MVP} for game-economy monetization and player-economy analytics.
+  \item Designed a privacy-preserving decentralized exchange using Parity's (Substrate Blockchain Framework) for game-to-game token transfers (written in Rust), Aleo zkOS privacy rails, and other EVM interoperability requirements.
+  \item Designed an interoperable \textbf{Token Bridge} in Solidity, creating smart contract interfaces for a multi-party Hash Time Lock Contract (MP-HTLC) settlement system. Used AES, OpenSSL, and TLS to secure CI/CD pipelines, maintain audit logs, manage revocations, and enable on-device remote attestations via Aleo \link{https://github.com/ProvableHQ/snarkVM}{zkVM-mediated verification}.
+  \item Led implementation of \link{https://github.com/Invo-Technologies/poems}{POEMS (Proof of the Effective Majority Staked)} --- an on/off-chain Schnorr signature scheme; won Aleo Best Tech 2023 and supported a \$50K Aleo Foundation grant. Built the commitment-challenge-response authentication flow integrated with PostgreSQL and wallet infrastructure to secure in-game INVO token operations (deposits, transfers, revocations) across Unity/Unreal wallets, with Aleo privacy interoperability to prove on-chain/in-game event validity and protect asset custody.
 \end{itemize}
 \end{adjustwidth}
 
-\entry{Independent Research Studio (contracts)}{Chaotic Beauty LLC}{Nov 2020 -- Jan 2026}
-\subline{C-Corp for R\&D, solutions architecture, DevRel contracts}
+\entry{Independent Research Studio (contracts)}{Chaotic Beauty LLC}{Nov 2020 -- Present}
+\subline{Single Member LLC for R\&D, solutions architecture, Developer Relations contracts}
 \begin{adjustwidth}{0.25in}{0in}
 \begin{itemize}
   \item Ran a contract studio for 6+ month engagements across blockchain teams, covering security architecture, integrations, and developer platform enablement.
   \item Delivered MPC/threshold-signing custody patterns and key-management hardening to reduce operational key exposure in production digital-asset systems.
+  \item ZKM Partnership with Kevin Liu (CEO of ZKM) to build ZKM Documentation for the Bitcoin Layer 2 ecosystem.
 \end{itemize}
 \end{adjustwidth}
 
-\subline{\textbf{Earlier:} Tesla (Model 3 Technician; top internal Da Vinci dexterity score) \textbullet{} Zygo (IBF Technician; ion-beam figuring lasers for precision optics on teams connected to James Webb telescope programs) \textbullet{} BNB Chain Labs (US Tech Evangelist) \textbullet{} Harmony (Developer Captain / DAO Governor; \$100K DAO funding; 700+ dev onboarding) \textbullet{} Bridge Builders DAO (Ethereum ecosystem consulting).}
+\subline{\textbf{Earlier:} Tesla (Model 3 Technician) \textbullet{} Zygo (IBF Technician; precision optics supporting JWST primary-mirror metrology) \textbullet{} BNB Chain Labs (US Tech Evangelist; first major US hire; onboarded teams incl. StorJ \& Polyhedra; host, \link{https://www.youtube.com/watch?v=wPqFvNzRZHg}{BNB Podcast}) \textbullet{} Harmony (Developer Captain/DAO Governor; secured \$100K DAO funding; onboarded 700+ devs) \textbullet{} Bridge Builders DAO (Ethereum smart contract developer/consultant).}
 
 %=============================================================================
 % Integrated evidence page
@@ -243,28 +250,26 @@
   \item \textbf{ETHDenver 2024:} AOS \emph{Hacker Deathmatch}.
   \item \textbf{VeChain \(\times\) EasyA 2024:} \link{https://www.linkedin.com/posts/easya_if-youve-been-following-on-twitter-youll-activity-7214575742167195648-wyEf}{PowerUp} (2nd).
   \item \textbf{Aleo 2023:} POEMS (Best Tech).
-  \item \textbf{ETHAmsterdam 2022:} \link{https://ethglobal.com/showcase/degenbox-zh7pp}{DegenBox} --- \textbf{EPNS --- Best Use of Frontend SDK:} \textbf{Boba Network} --- Best Use
-  \item \textbf{KCACTF 2018:} Best Partner (Theatre) --- \link{https://www.imdb.com/name/nm8188217/}{IMDB}
+  \item \textbf{ETHAmsterdam 2022:} \link{https://ethglobal.com/showcase/degenbox-zh7pp}{DegenBox} --- EPNS Best Use of Frontend SDK; Boba Network Best Use.
+  \item \textbf{KCACTF 2018:} Best Partner (Theatre) --- \link{https://www.imdb.com/name/nm8188217/}{IMDB}.
 \end{itemize}
 
 \textbf{Credentials}
-\textbf{SimpliLearn / RareSkills:} Blockchain Engineering Fellow (May 2023) \textbullet{}
-\textbf{Zero Knowledge University (Harmony ONE Foundation):} Zero Knowledge University Developer (Mar 2022), 
-\link{https://github.com/TalDerei/ZKU?tab=readme-ov-file}{ZKU program repo}\par
+\textbf{RareSkills:} Research Fellow (May 2023) \textbullet{} \textbf{ZKU (Harmony ONE):} Zero Knowledge University Developer (Mar 2022)\par
 
 \textbf{Selected Writing, Docs \& Research}
 \begin{itemize}
   \item \link{https://phalanetwork.mintlify.app/docs}{Phala Cloud / dstack Documentation Suite}
   \item \link{https://docs.goat.network/}{GOAT Network Protocol Documentation}
   \item \link{https://coin.fi/research}{CoinFi Research Archive}
-  \item \link{https://eni6ma.gitbook.io/eni6ma/}{ENI6MA Research Documentation (public excerpts)}
+  \item \link{https://eni6ma.gitbook.io/eni6ma/}{ENI6MA Research Fellowship (public excerpts)}
   \item \link{https://github.com/DylanCkawalec/Aleo-Developer-Enablement-Strategy}{Aleo Developer Enablement Strategy}
   \item \link{https://medium.com/cryptocurrency-scripts/churn-monetization-is-the-future-of-gamefi-2fac57ff0489}{Churn Monetization is the Future of GameFi}
   \item \link{https://medium.com/cryptocurrency-scripts/the-future-of-gamefi-and-gaming-invos-dlal-and-the-digital-economy-0d6a88c7de3a}{The Future of GameFi and Gaming: Invo's DLAL and the Digital Economy}
   \item \link{https://invotechnologies.medium.com/bridging-blockchain-and-gaming-with-invos-default-currency-solution-113dedaace96}{Bridging Blockchain and Gaming with Invo's Default Currency Solution}
 \end{itemize}
 
-\textbf{Selected Talks, Podcast Hosting \& Public Proofs}
+\textbf{Selected Talks, Podcast Hosting \& Public Appearances Online}
 \begin{itemize}
   \item \link{https://blackboxpodcast.com/}{Host, The Blackbox Podcast} --- Sponsored by Phala Network; independent guest interviews and deep dives across privacy, AI, and blockchain.
   \item \link{https://www.youtube.com/watch?v=o1TY6sjMOek\&t=119s}{DevMos 2024: Decentralized Front Ends Workshop}
@@ -272,8 +277,5 @@
   \item \link{https://youtu.be/wPqFvNzRZHg?si=c4Atvb58sczYqTd}{Bread N' Butter Podcast (BNB Chain Labs)}
   \item \link{https://www.youtube.com/watch?v=qmSTNj12Rbc}{Cosmic Public Proof (YouTube)} --- published a carrier-audio proof flow with permalinked verification context in the video description.
 \end{itemize}
-
-\vspace{2pt}
-{\small\textcolor{HighlightGray}{Note: ENI6MA/Cosmic research is summarized at a high level under confidentiality agreements; Dylan Rosario is the only named research collaborator.}}
 
 \end{document}
