@@ -42,18 +42,16 @@
     <section>
       <h2>Core Competencies</h2>
       <p><strong>Technologies:</strong> Python, Rust, C/C++, Go, TypeScript, Solidity, PyTorch, FastAPI, Docker, GitHub Actions, Postgres, Redis.</p>
-      <p><strong>AI Systems Built:</strong> local-first inference pipelines (Ollama, llama.cpp, vLLM; Llama/Mixtral/Qwen); TEE-backed agents; verifier prototypes; Rust deployment CLIs.</p>
-      <p><strong>Confidential Compute &amp; Cloud:</strong> Intel TDX/SGX, Phala Cloud/dstack, Fortanix, Azure SGX VMs, AWS, Cloudflare, remote attestation, enclave TLS.</p>
-      <p><strong>Protocol Specializations:</strong> protocol integrations, partner engineering, ZK authentication, threshold signing, threat modeling, TLA+/PlusCal specs.</p>
+      <p><strong>AI Systems:</strong> local-first inference (Ollama, llama.cpp, vLLM; Llama/Mixtral/Qwen), agent orchestration, verifier pipelines.</p>
+      <p><strong>Confidential Compute:</strong> Intel SGX/TDX, Phala Cloud/dstack, Fortanix, RA-TLS, remote attestation, zero-trust execution.</p>
+      <p><strong>Infrastructure &amp; Protocols:</strong> AWS, Azure SGX VMs, Cloudflare, ZK proofs, threshold signing, blockchain systems, TLA+/PlusCal.</p>
     </section>
 
     <section>
       <h2>Production Systems &amp; Research Artifacts</h2>
       <ul>
-        <li><strong class="tag production">Production</strong> Built <a href="https://jokuh.com" target="_blank" rel="noopener noreferrer">jokuh.com</a> for designing and deploying local-first AI systems with agent orchestration, architecture planning, and zero-trust execution patterns.</li>
-        <li><strong class="tag production">Production</strong> Shipped dstack integrations on Phala, including <a href="https://github.com/DylanCkawalec/warp-engine" target="_blank" rel="noopener noreferrer">Warp Engine</a> for attested TDX private-agent execution and an Akave gateway for confidential o3 inference paths.</li>
-        <li><strong class="tag production">Production / open source</strong> Led SGX decentralized front-end research and built <a href="https://github.com/osmosis-labs/defe" target="_blank" rel="noopener noreferrer">github.com/osmosis-labs/defe</a>, a Rust CLI for Fortanix SGX provisioning on Azure.</li>
-        <li><strong class="tag research">Research</strong> Published <a href="https://github.com/DylanCkawalec/DI" target="_blank" rel="noopener noreferrer">github.com/DylanCkawalec/DI</a> and ENI6MA/Cosmic verifier prototypes to demonstrate ERC-8004 agent identity, private AI authentication, and zero-trust proof boundaries.</li>
+        <li><strong class="tag production">Production</strong> Mermate, Synth, POEMS, dstack integrations (Phala), <a href="https://github.com/DylanCkawalec/warp-engine" target="_blank" rel="noopener noreferrer">Warp Engine</a>, and Akave confidential gateway work for private AI deployments.</li>
+        <li><strong class="tag research">Research</strong> SGX decentralized infrastructure (<a href="https://github.com/osmosis-labs/defe" target="_blank" rel="noopener noreferrer">defe</a>), zero-trust verification systems (Cosmic/ENI6MA), and <a href="https://github.com/DylanCkawalec/DI" target="_blank" rel="noopener noreferrer">DI</a> for ERC-8004 agent identity.</li>
       </ul>
     </section>
 
@@ -70,7 +68,9 @@
           <p>Dec 2025 – Present</p>
         </div>
         <ul>
-          <li>Building and operating production confidential AI systems for private inference and multi-agent orchestration, including Mermate, Synth, and Jokuh workflows across local and cloud environments.</li>
+          <li>Designed and deployed private AI systems for agent orchestration and local-first inference across TEE and cloud environments.</li>
+          <li>Built internal tooling to generate architectures, APIs, and deployment pipelines for multi-agent systems.</li>
+          <li>Led development of confidential AI workflows enabling secure execution, verification, and data isolation.</li>
         </ul>
       </article>
 
@@ -83,22 +83,24 @@
           <p>May 2025 – Dec 2025</p>
         </div>
         <ul>
-          <li>Led confidential AI rollout on Intel TDX via dstack; authored Docker reference deployments and integration docs that moved 24+ partner teams from evaluation into production deployments of confidential AI systems.</li>
-          <li>Built protocol integrations across EigenLayer, Redpill.ai, Rift.trade, Akave, and TEE agent teams; grew dstack visibility 34→400+ GitHub stars and co-authored Trustless Cloud Agents (CCC 17/17 vote).</li>
+          <li>Led confidential AI rollout on Intel TDX, enabling secure deployments across 24+ partner teams.</li>
+          <li>Designed integrations with EigenLayer, Rift.trade, Akave, and Redpill.ai for TEE-based execution.</li>
+          <li>Built Docker deployment workflows and hands-on integration support that grew dstack visibility 34→400+ GitHub stars.</li>
         </ul>
       </article>
 
       <article class="role">
         <div class="role-head">
           <div>
-            <h3>Founding Engineer / Principal Architect</h3>
+            <h3>Principal Research Engineer</h3>
             <p class="company">Cosmic Inc. | ENI6MA Research</p>
           </div>
           <p>Summer 2024 – Jan 2026</p>
         </div>
         <ul>
-          <li>Designed zero-trust architecture (TEE-only execution + cryptographic proof boundaries); built Python/C++ verifiers, local private inference pipelines, protocol specs, threat models, and deterministic replay tests.</li>
-          <li>Delivered provisional patent architecture supporting a $168K friends-and-family raise; published public research excerpts and proof previews via <a href="https://eni6ma.gitbook.io/eni6ma/" target="_blank" rel="noopener noreferrer">eni6ma.gitbook.io/eni6ma</a>.</li>
+          <li>Designed zero-trust verification systems for confidential compute and deterministic execution.</li>
+          <li>Built Python/C++ verifiers and proof pipelines for validating execution inside secure environments.</li>
+          <li>Delivered provisional patent architecture supporting a $168K friends-and-family raise.</li>
         </ul>
       </article>
 
@@ -118,13 +120,14 @@
       <article class="role">
         <div class="role-head">
           <div>
-            <h3>R&amp;D Engineer</h3>
+            <h3>Research Engineer</h3>
             <p class="company">Osmosis Foundation</p>
           </div>
           <p>May 2024 – Jul 2024</p>
         </div>
         <ul>
-          <li>Shipped production Rust CLI (<a href="https://github.com/osmosis-labs/defe" target="_blank" rel="noopener noreferrer">defe</a>) for Fortanix SGX on Azure; automated enclave TLS, key lifecycle, and threshold signing for decentralized front-ends.</li>
+          <li>Built SGX-based infrastructure tooling in Rust for Fortanix deployment on Azure.</li>
+          <li>Developed <a href="https://github.com/osmosis-labs/defe" target="_blank" rel="noopener noreferrer">defe</a>, a CLI for TEE lifecycle management, enclave TLS, key lifecycle, and threshold signing.</li>
         </ul>
       </article>
 
@@ -142,7 +145,7 @@
       </article>
 
       <p class="earlier">
-        <strong>Earlier:</strong> BNB Chain Labs (early U.S. technology evangelist; partner integrations with Polyhedra, StorJ, QuickNode, Bware Labs) • Findora/Discreet Labs (Protocol Integrations; 80+ validators; adoption during major funding expansion) • Harmony (Developer Captain/DAO Governor; $100K DAO funding; 700+ devs) • Tesla (Model 3 Technician) • Zygo (IBF Technician; precision optics, JWST metrology).
+        <strong>Earlier:</strong> Led integrations and ecosystem development across BNB Chain Labs, Findora/Discreet Labs, Harmony, Tesla, and Zygo, working across cryptography, blockchain infrastructure, developer systems, manufacturing, and precision optics.
       </p>
     </section>
 
