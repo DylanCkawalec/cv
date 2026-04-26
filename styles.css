@@ -70,7 +70,8 @@ h1 {
 
 .expertise,
 .education,
-.contact {
+.contact,
+.github-note {
   margin: 2px 0;
   color: var(--text-muted);
 }
@@ -83,6 +84,11 @@ h1 {
 .contact {
   margin-top: 10px;
   font-size: 14px;
+}
+
+.github-note {
+  margin-top: 6px;
+  font-size: 13px;
 }
 
 .contact span {
@@ -122,6 +128,21 @@ li {
   margin: 4px 0;
 }
 
+.tag {
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 0.88em;
+  letter-spacing: 0.01em;
+}
+
+.tag.production {
+  color: var(--text-muted);
+}
+
+.tag.research {
+  color: #4b5563;
+}
+
 a {
   color: var(--title-blue);
   text-decoration: underline;
@@ -149,10 +170,11 @@ a:hover {
   color: var(--text-muted);
 }
 
-.role-head h3 span {
-  margin-left: 8px;
+.company {
+  margin: 1px 0 0;
+  color: var(--text-muted);
   font-style: italic;
-  font-weight: 400;
+  font-size: 15px;
 }
 
 .role-head p {
@@ -172,6 +194,13 @@ a:hover {
   margin-top: 10px;
   color: var(--text-muted);
   font-size: 15px;
+}
+
+.signal {
+  margin: 0 0 8px;
+  color: var(--text-muted);
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .note {

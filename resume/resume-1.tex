@@ -13,8 +13,6 @@
 \usepackage{tabularx}
 \usepackage{enumitem}
 \usepackage{titlesec}
-\usepackage[normalem]{ulem}
-\usepackage{fontawesome5}
 \usepackage{fancyhdr}
 \usepackage[absolute,overlay]{textpos}
 
@@ -54,7 +52,7 @@
   linkcolor=TitleBlue,
   citecolor=TitleBlue
 }
-\newcommand{\link}[2]{\href{#1}{\textcolor{TitleBlue}{\uline{#2}}}}
+\newcommand{\link}[2]{\href{#1}{\textcolor{TitleBlue}{#2}}}
 
 % ---------- Headings ----------
 \titleformat{\section}
@@ -73,10 +71,7 @@
 
 % ---------- Entry helpers ----------
 \newcommand{\entry}[3]{%
-  \noindent\begin{tabularx}{\linewidth}{@{}Xr@{}}
-    {\resumeoldtextbf{\textcolor{HighlightGray}{#1}} \hspace{0.35em} \textcolor{HighlightGray}{\emph{#2}}} &
-    {\small\textcolor{HighlightGray}{#3}} \\
-  \end{tabularx}\vspace{-2pt}
+  \noindent{\resumeoldtextbf{\textcolor{HighlightGray}{#1}} \hspace{0.35em} \textcolor{HighlightGray}{\emph{#2}} \hfill {\small\textcolor{HighlightGray}{#3}}}\par\vspace{-2pt}
 }
 \newcommand{\subline}[1]{\noindent{\small\textcolor{HighlightGray}{#1}}\vspace{1pt}}
 
@@ -87,20 +82,20 @@
 % Contact
 %=============================================================================
 {\LARGE \resumeoldtextbf{Dylan Kawalec}}\par
-{\normalsize \textcolor{HighlightGray}{\textbf{Founding Engineer \& Solutions Architect} \textbar{} \textbf{Privacy-Preserving AI Infrastructure \& Confidential Compute}}}\par
-{\small \textcolor{HighlightGray}{Confidential AI Runtimes \textbullet{} TEE-Backed LLM Agents \textbullet{} Zero-Trust Deployment \textbullet{} Blockchain Infrastructure}}\par
-{\footnotesize \textcolor{HighlightGray}{\textbf{B.S. Computer Science (WGU)} \textbullet{} \textbf{A.A.S. Computer Programming (MiraCosta)}}}\par
+{\normalsize \textcolor{HighlightGray}{\textbf{AI Solutions Architect (Confidential Systems)}}}\par
+{\small \textcolor{HighlightGray}{Forward Deployed Engineering \textbar{} Applied Research \textbar{} Protocol Integrations}}\par
+{\small \textcolor{HighlightGray}{Building the trust layer for private intelligent systems}}\par
 \vspace{1pt}
 {\small
-\textcolor{TitleBlue}{\footnotesize\faIcon{envelope}}\,\link{mailto:dylankawalec@gmail.com}{dylankawalec@gmail.com}
-\hspace{0.4em}\textbar{}\hspace{0.4em}
-\textcolor{TitleBlue}{\footnotesize\faIcon{linkedin}}\,\link{https://linkedin.com/in/dylankawalec}{linkedin.com/in/dylankawalec}
-\hspace{0.4em}\textbar{}\hspace{0.4em}
-\textcolor{TitleBlue}{\footnotesize\faIcon{github}}\,\link{https://github.com/DylanCkawalec}{github.com/DylanCkawalec}
-\hspace{0.4em}\textbar{}\hspace{0.4em}
-\textcolor{TitleBlue}{\footnotesize\faIcon{globe}}\,\link{https://dylanckawalec.github.io/cv}{dylanckawalec.github.io/cv}
-\hspace{0.4em}\textbar{}\hspace{0.4em}
-\textcolor{HighlightGray}{SF Bay Area \textbullet{} NYC \textbullet{} Open to Remote}
+\textcolor{HighlightGray}{SF Bay Area}
+\hspace{0.35em}\textbar{}\hspace{0.35em}
+\link{https://linkedin.com/in/dylankawalec}{linkedin.com/in/dylankawalec}
+\hspace{0.35em}\textbar{}\hspace{0.35em}
+\link{https://github.com/DylanCkawalec}{github.com/DylanCkawalec}
+\hspace{0.35em}\textbar{}\hspace{0.35em}
+\link{https://jokuh.com}{jokuh.com}
+\hspace{0.35em}\textbar{}\hspace{0.35em}
+\link{mailto:dylankawalec@gmail.com}{dylankawalec@gmail.com}
 }\par
 
 %=============================================================================
@@ -108,30 +103,28 @@
 %=============================================================================
 \section*{Professional Summary}
 \small
-I design and ship production confidential AI systems on Intel TDX/SGX across Azure, AWS, Cloudflare, and Phala Cloud. I specialize in TEE-backed LLM agent orchestration, local private inference pipelines, remote attestation, and secure deployment that moves research into production. At Phala Network, I helped scale confidential-compute adoption across 24+ partner teams, grew open-source visibility from 34\(\rightarrow\)400+ stars, and co-authored the Trustless Cloud Agents specification with the Ethereum Foundation.
+AI Solutions Architect for confidential systems. I build production private AI runtimes, TEE-backed deployment paths, and protocol integrations, then use research artifacts to validate and formalize the underlying architecture. Recent work includes Phala dstack deployments for 24+ partner teams, Rust SGX tooling for Osmosis on Azure, and zero-trust verifier prototypes in Python/C++. Most roles were contract or founding engagements across early-stage infrastructure teams.
 
 %=============================================================================
 % Core Competencies
 %=============================================================================
 \section*{Core Competencies}
 \small
-\textbf{AI \& Agent Systems:} PyTorch, LLM agent orchestration (\link{https://github.com/DylanCkawalec/warp-engine}{Warp Engine}), local private inference pipelines, Evoformer-inspired training, FastAPI serving.\par
-\textbf{Confidential Compute:} Intel TDX/SGX, Phala Cloud/dstack, Fortanix, remote attestation, enclave TLS, zero-trust verification.\par
-\textbf{Cloud \& Deployment:} Azure (SGX VMs), AWS, Cloudflare (Workers/CDN), Docker, GitHub Actions, Terraform.\par
-\textbf{Blockchain \& Crypto:} Solidity (ERC-8004), zkMIPS, Aleo zkOS, Substrate, MPC, threshold signing, ZK authentication.\par
-\textbf{Languages \& Systems:} Python (8+ yr), Rust, C/C++, Go, TypeScript \textbar{} TLA+/PlusCal, Postgres, Redis.
+\textbf{Technologies:} Python, Rust, C/C++, Go, TypeScript, Solidity, PyTorch, FastAPI, Docker, GitHub Actions, Postgres, Redis.\par
+\textbf{AI Systems Built:} local-first inference pipelines (Ollama, llama.cpp, vLLM; Llama/Mixtral/Qwen); TEE-backed agents; verifier prototypes; Rust deployment CLIs.\par
+\textbf{Confidential Compute \& Cloud:} Intel TDX/SGX, Phala Cloud/dstack, Fortanix, Azure SGX VMs, AWS, Cloudflare, remote attestation, enclave TLS.\par
+\textbf{Protocol Specializations:} protocol integrations, partner engineering, ZK authentication, threshold signing, threat modeling, TLA+/PlusCal specs.
 
 %=============================================================================
 % Selected Builds
 %=============================================================================
-\section*{Selected Builds \& Impact}
+\section*{Production Systems \& Research Artifacts}
 \small
 \begin{itemize}
-  \item Shipped \link{https://github.com/DylanCkawalec/DI}{DI} (ERC-8004) + \link{https://github.com/DylanCkawalec/warp-engine}{Warp Engine} for attested TDX private-agent execution; deployed on Phala Cloud with Cloudflare CDN.
-  \item Built \link{https://github.com/osmosis-labs/defe}{defe} (Rust CLI): Fortanix SGX provisioning, enclave-native TLS, and threshold signing on Azure SGX VMs for Osmosis decentralized front-ends.
-  \item Designed local private AI training and inference tooling (PyTorch, custom Evoformer architecture, C++ verifier prototypes) for zero-trust authentication R\&D at \link{https://eni6ma.gitbook.io/eni6ma/}{ENI6MA} / \link{https://github.com/DylanCkawalec/cosmic-hack}{Cosmic}.
-  \item Led \link{https://github.com/Invo-Technologies/poems}{POEMS} implementation on AWS (Aleo Best Tech 2023; \$50K grant); designed AIMBC/Yor Bridge MP-HTLC settlement in Solidity.
-  \item Led confidential AI rollout at Phala: deployed TDX private agents via dstack for 24+ partner teams; supported Trustless Cloud Agents adoption (CCC 17/17 vote).
+  \item \textbf{Production:} Built \link{https://jokuh.com}{jokuh.com} for designing and deploying local-first AI systems with agent orchestration, architecture planning, and zero-trust execution patterns.
+  \item \textbf{Production:} Shipped dstack integrations on Phala, including \link{https://github.com/DylanCkawalec/warp-engine}{Warp Engine} for attested TDX private-agent execution and an Akave gateway for confidential o3 inference paths.
+  \item \textbf{Production / open source:} Led SGX decentralized front-end research and built \link{https://github.com/osmosis-labs/defe}{github.com/osmosis-labs/defe}, a Rust CLI for Fortanix SGX provisioning on Azure.
+  \item \textbf{Research:} Published \link{https://github.com/DylanCkawalec/DI}{github.com/DylanCkawalec/DI} and ENI6MA/Cosmic verifier prototypes to demonstrate ERC-8004 agent identity, private AI authentication, and zero-trust proof boundaries.
 \end{itemize}
 
 %=============================================================================
@@ -139,22 +132,26 @@ I design and ship production confidential AI systems on Intel TDX/SGX across Azu
 %=============================================================================
 \section*{Experience}
 \small
-\entry{Head of Developer Relations \& Solutions Architect}{Phala Network}{May -- Dec 2025}
+\entry{Head of AI, Decentralized Confidential Compute}{Jokuh (Independent R\&D)}{Dec 2025 -- Present}
 \begin{itemize}
-  \item Led confidential AI rollout on Intel TDX via dstack; authored documentation and reference Docker deployments that moved 24+ partner teams to production private-agent systems.
-  \item Grew dstack repo visibility from 34\(\rightarrow\)400+ GitHub stars; co-authored the Trustless Cloud Agents spec (adopted by the Confidential Computing Consortium -- 17/17 vote).
+  \item Building and operating production confidential AI systems for private inference and multi-agent orchestration, including Mermate, Synth, and Jokuh workflows across local and cloud environments.
+\end{itemize}
+
+\entry{Head of Developer Relations \& Solutions Architect (Protocol Integrations)}{Phala Network}{May -- Dec 2025}
+\begin{itemize}
+  \item Led confidential AI rollout on Intel TDX via dstack; authored Docker reference deployments and integration docs that moved 24+ partner teams from evaluation into production deployments of confidential AI systems.
+  \item Built protocol integrations across EigenLayer, Redpill.ai, Rift.trade, Akave, and TEE agent teams; grew dstack visibility 34\(\rightarrow\)400+ GitHub stars and co-authored Trustless Cloud Agents (CCC 17/17 vote).
 \end{itemize}
 
 \entry{Founding Engineer / Principal Architect}{Cosmic Inc. \textbar{} ENI6MA Research}{Summer 2024 -- Jan 2026}
 \begin{itemize}
-  \item Designed zero-trust architecture (TEE-only execution + cryptographic proof boundaries); built Python/C++ verifiers and local private inference pipelines; delivered the provisional patent package that supported a \$168K friends-and-family raise.
-  \item Authored protocol specifications and threat models, then translated them into verification harnesses and deterministic replay tests for partner technical reviews.
-  \item Published public research excerpts and proof previews via \link{https://eni6ma.gitbook.io/eni6ma/}{ENI6MA Research} and \link{https://www.youtube.com/watch?v=qmSTNj12Rbc}{Cosmic Public Proof}.
+  \item Designed zero-trust architecture (TEE-only execution + cryptographic proof boundaries); built Python/C++ verifiers, local private inference pipelines, protocol specs, threat models, and deterministic replay tests.
+  \item Delivered provisional patent architecture supporting a \$168K friends-and-family raise; published public research excerpts and proof previews via \link{https://eni6ma.gitbook.io/eni6ma/}{eni6ma.gitbook.io/eni6ma}.
 \end{itemize}
 
-\entry{Head of Developer Relations}{GOAT Network (BTC L2)}{Jul 2024 -- Jan 2025}
+\entry{Head of Developer Relations (Protocol Integrations)}{GOAT Network (BTC L2)}{Jul 2024 -- Jan 2025}
 \begin{itemize}
-  \item Delivered Founders Club MVP and onboarded 100+ founders; authored zkMIPS/EVM docs and ran BTC L2 workshops (BTC Nashville + Staking Summit Singapore).
+  \item Delivered Founders Club MVP and onboarded 100+ founders; authored zkMIPS/EVM docs, ran BTC L2 workshops, and supported ZKM-led Bitcoin L2 integration research.
 \end{itemize}
 
 \entry{R\&D Engineer}{Osmosis Foundation}{May -- Jul 2024}
@@ -164,11 +161,11 @@ I design and ship production confidential AI systems on Intel TDX/SGX across Azu
 
 \entry{CTO \& Principal Engineer}{Invo Technologies}{Apr 2023 -- Feb 2024}
 \begin{itemize}
-  \item Built the Invo MVP on AWS; designed a privacy-preserving exchange (Substrate + Aleo zkOS) and led \link{https://github.com/Invo-Technologies/poems}{POEMS} (Aleo Best Tech 2023 + \$50K grant).
+  \item Built the Invo MVP on AWS; completed patent architecture, led \link{https://github.com/Invo-Technologies/poems}{github.com/Invo-Technologies/poems}, and won Aleo Best Tech 2023 (\$50K grant).
 \end{itemize}
 
 \vspace{1pt}
-{\footnotesize\textcolor{HighlightGray}{\textbf{Earlier:} BNB Chain Labs (US Technology Evangelist; first US hire; host, \link{https://www.youtube.com/watch?v=wPqFvNzRZHg}{BNB Podcast}) \textbullet{} Findora/Discreet Labs (Head of DevRel; 80+ validators onboarded) \textbullet{} Harmony (Developer Captain/DAO Governor; \$100K funding; 700+ devs) \textbullet{} Tesla (Model 3 Technician) \textbullet{} Zygo (IBF Technician; precision optics, JWST metrology).}}
+{\footnotesize\textcolor{HighlightGray}{\textbf{Earlier:} BNB Chain Labs (early U.S. technology evangelist; partner integrations with Polyhedra, StorJ, QuickNode, Bware Labs) \textbullet{} Findora/Discreet Labs (Protocol Integrations; 80+ validators; adoption during major funding expansion) \textbullet{} Harmony (Developer Captain/DAO Governor; \$100K DAO funding; 700+ devs) \textbullet{} Tesla (Model 3 Technician) \textbullet{} Zygo (IBF Technician; precision optics, JWST metrology).}}
 
 %=============================================================================
 % Recognition & Publications
@@ -176,17 +173,7 @@ I design and ship production confidential AI systems on Intel TDX/SGX across Azu
 \section*{Recognition, Credentials \& Publications}
 \small
 \textbf{Awards:} ETHGlobal SF 2024 (Ledger 1st, Polygon 1st), Aleo Best Tech 2023, VeChain\(\times\)EasyA PowerUp (2nd), ETHDenver 2024 Hacker Deathmatch.\par
-\textbf{Credentials:} RareSkills Research Fellow; ZKU Developer; B.S.\ Computer Science (WGU); A.A.S.\ Computer Programming (MiraCosta).\par
-\vspace{2pt}
-{\footnotesize
-\begin{tabular}{@{}p{0.48\linewidth}p{0.48\linewidth}@{}}
-\link{https://phalanetwork.mintlify.app/docs}{Phala Cloud / dstack Docs} &
-\link{https://docs.goat.network/}{GOAT Network Protocol Docs} \\
-\link{https://eni6ma.gitbook.io/eni6ma/}{ENI6MA Research (public excerpts)} &
-\link{https://github.com/DylanCkawalec/cosmic-hack}{Cosmic Prototype (public repo)} \\
-\link{https://www.youtube.com/watch?v=o1TY6sjMOek\&t=119s}{DevMos 2024: DFE Workshop} &
-\link{https://blackboxpodcast.com/}{Host, The Blackbox Podcast} \\
-\end{tabular}
-}
+\textbf{Credentials:} RareSkills Research Fellow; ZKU Developer; B.S.\ Computer Science, WGU (2019--2021); A.A.S.\ Computer Programming, MiraCosta (2015--2019).\par
+\textbf{Selected links:} \link{https://phalanetwork.mintlify.app/docs}{phalanetwork.mintlify.app/docs} \textbar{} \link{https://docs.goat.network/}{docs.goat.network} \textbar{} \link{https://eni6ma.gitbook.io/eni6ma/}{eni6ma.gitbook.io/eni6ma} \textbar{} \link{https://github.com/DylanCkawalec/cosmic-hack}{github.com/DylanCkawalec/cosmic-hack} \textbar{} \link{https://blackboxpodcast.com/}{blackboxpodcast.com}
 
 \end{document}
